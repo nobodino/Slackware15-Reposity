@@ -3,46 +3,6 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
-## [ Released ] - 2021-07-04 #############################################
-
-### Added / Adicionado
- - Script:
-	- 
- - Extra:
-	- 
-###
-
-### Upgraded / Atualizado
- - Script:
-	-
- - Extra:
-	-
-###
-
-### Changed / Modificado
- - Script:
-	- 
- - Extra:
-	- 
-###
-
-### Removed / Removido
- - Script:
-	- 
- - Extra:
-	- 
-###
-
-### Fixed / Corrigido
- - Script:
-	- jack.SlackBuild
-	- lsdvd.SlackBuild
-	- python3-ConfigParser.SlackBuild
-###
-
-##########################################################################
-
-
 ## [ Released ] - 2021-06-27 #############################################
 
 ### Added / Adicionado
