@@ -3,38 +3,40 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
-## [ Released ] - 2021-07-04 #############################################
+## [ Released ] - 2021-07-10 #############################################
 
 ### Added / Adicionado
- - Script:
-	- 
+ - SlackBuilds:
+	- umplayer.SlackBuild
+ - Games:
+	- allegro4.SlackBuild
+	- opensonic.SlackBuild
+	- quake2.SlackBuild
  - Extra:
-	- 
-###
-
-### Upgraded / Atualizado
- - Script:
-	-
- - Extra:
-	-
+	- Allegro_4.2.2_FIX:
+		- allegro-4.0.3-cfg.patch
+		- allegro-4.0.3-libdir.patch
+		- allegro-4.4.2-buildsys-fix.patch
+		- allegro-4.4.2-compat-fix-aliases.patch
+		- allegro-4.4.2-keybgrab-fix.patch
+		- allegro-4.4.2-mutex-fix.patch
+		- allegro-4.4.2-no-xsync-from-thread.patch
+		- allegro-4.4.3-datafile-double-free.patch
+		- allegro-4.4.3-texinfo-non-utf8-input-fix.patch
+		- allegro_GLX_RGBA_FLOAT_BIT_fix.patch
+	- OpenSonic_0.1.4_FIX / opensonic-fix-cmake.patch
+ - Rebuild:
+	- vim.SlackBuild
 ###
 
 ### Changed / Modificado
- - Script:
-	- 
- - Extra:
-	- 
-###
-
-### Removed / Removido
- - Script:
-	- 
- - Extra:
-	- 
+ - Rename Script forder for SlackBuilds.
+ - Added folders Rebuild and Games.
+ - flare.SlackBuild moved for Games.
 ###
 
 ### Fixed / Corrigido
- - Script:
+ - SlackBuilds:
 	- jack.SlackBuild
 	- lsdvd.SlackBuild
 	- python3-ConfigParser.SlackBuild

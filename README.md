@@ -36,6 +36,7 @@ Feel at ease to install the packages you need.
 | `VSCodium 1.57.1`              | `x86_64`        | `IDE for Various Languages`        |               |
 | `Vim 8.2.3075`                 | `i586 / x86_64` | `Best Command Line Text Editor`    |               |
 | `WhatsApp Desktop 0.6.1`       | `x86_64`        | `Unofficial WebApp for WhatsApp`   |               |
+| `............................` | `.............` | `................................` | `...........` |
 
 <br/><br/>
 
@@ -44,7 +45,7 @@ Feel at ease to install the packages you need.
 | `Frostwire 6.9.4`              | `x86_64`        | `P2P Bittorrent Downloader`        |
 | `JDownloader2 2.0`             | `x86_64`        | `Download Manager`                 |
 | `Oracle JDK16 16.0.1`          | `x86_64`        | `Virtual Machine Java`             |
-| `____________________________` | `_____________` | `________________________________` |
+| `............................` | `.............` | `................................` |
 
 <br/><br/>
 
@@ -55,7 +56,7 @@ Feel at ease to install the packages you need.
 | `protonvpn-cli 2.2.11`         | `i586 / x86_64` | `Cli for ProtonVPN`                |
 | `protonvpn-gui 2.1.1`          | `i586 / x86_64` | `GUI for ProtonVPN`                |
 | `Transmageddon 1.5`            | `i586 / x86_64` | `Video Format Conversion Tool`     |
-| `____________________________` | `_____________` | `________________________________` |
+| `............................` | `.............` | `................................` |
 
 | `Python Modules`               | `Architecture`  | `Required By`                      |
 |--------------------------------|-----------------|------------------------------------|
@@ -68,7 +69,7 @@ Feel at ease to install the packages you need.
 | `python3-setproctitle 1.2.2`   | `i586 / x86_64` | `Hypnotix`                         |
 | `python3-pythondialog 3.5.2`   | `i586 / x86_64` | `protonvpn-cli`                    |
 | `python3-xlib 0.30`            | `i586 / x86_64` | `Kazam`                            |
-| `____________________________` | `_____________` | `________________________________` |
+| `............................` | `.............` | `................................` |
 
 <br/><br/>
 
@@ -77,7 +78,24 @@ Feel at ease to install the packages you need.
 | `OpenSonic 0.1.4`              | `i586 / x86_64` | `Sonic Open Source`                |
 | `Flare Game 1.11`              | `i586 / x86_64` | `RPG Game / Include Engine`        |
 | `Quake2 8.00`                  | `i586 / x86_64` | `FPS Game`                         |
-| `____________________________` | `_____________` | `________________________________` |
+| `............................` | `.............` | `................................` |
+
+
+<br/><br/>
+
+| `Packages for Customizations`  | `Architecture`  | `Packages Description`             |
+|--------------------------------|-----------------|------------------------------------|
+| `asciiquarium 1.1`             | `i586 / x86_64` | `Sea Animation in ASCII Art`       |
+| `ccat 1.1.0`                   | `i586 / x86_64` | `Colorized cat`                    |
+| `cmatrix 2.0`                  | `i586 / x86_64` | `Matrix in Terminal`               |
+| `cowsay 3.04`                  | `i586 / x86_64` | `Configurable Talking Cow`         |
+| `Fortune Mod 2.12.0`           | `i586 / x86_64` | `View Phrases in Terminal`         |
+| `Fortune Mod Br 20160820`      | `No Arch`       | `Language PT-BR for fortune-mod`   |
+| `grc 1.12`                     | `i586 / x86_64` | `Colorized Commands`               |
+| `Luna Wallpapers 0.2`          | `No Arch`       | `Elementary Wallpapers`            |
+| `Mandriva Cursor 2.0 `         | `No Arch`       |                                    |
+| `sl 5.0.2`                     | `i586 / x86_64` |                                    |
+| `............................` | `.............` | `................................` |
 
 <br/><br/>
 
@@ -105,40 +123,24 @@ Feel at ease to install the packages you need.
 | `wxGTK3 3.0.5`                 | `i586 / x86_64` | `CodeBlocks`                       |
 | `xa 2.3.11`                    | `i586 / x86_64` | `libsidplayfp`                     |
 | `Xapp 2.2.1`                   | `i586 / x86_64` | `Hypnotix`                         |
-| `____________________________` | `_____________` | `________________________________` |
+| `............................` | `.............` | `................................` |
 
 <br/><br/>
 
-| `Other Packages`               | `Architecture`  | `Packages Description`             | `Required By`             |
-|--------------------------------|-----------------|------------------------------------|---------------------------|
-| `Aria2 1.35.0`                 | `i586 / x86_64` | `Download Manager for Terminal`    | `UGet`                    |
-| `cab-extract 1.9.1`            | `i586 / x86_64` | `Extract CAB Archives`             |                           |
-| `DPKG 1.20.9`                  | `i586 / x86_64` | `DEB Package Manager`              |                           |
-| `lcab 1.0b12`                  | `i586 / x86_64` | `Compress Files for CAB Archives`  |                           |
-| `Molotov 1.2`                  | `i586 / x86_64` | `Make USB Boot for Windows 10`     |                           |
-| `NoSync Browser 1.1`           | `i586 / x86_64` |                                    |                           |
-| `Refine 2.0`                   | `i586 / x86_64` | `Read Specific Lines of Text File` |                           |
-| `perl-Curses 1.37`             | `i586 / x86_64` |                                    | `perl-Term-Animation`     |
-| `perl-Term-Animation 2.6`      | `i586 / x86_64` |                                    | `asciiquarium`            |
-| `Windscribe Cli 1.4_52`        | `x86_64`        | `Cli for Windscribe VPN`           |                           |
-| `Zenity 3.32.0`                | `i586 / x86_64` |                                    |                           |
-| `____________________________` | `_____________` | `________________________________` | `_______________________` | 
-
-<br/><br/>
-
-| `Packages for Customizations`  | `Architecture`  | `Packages Description`             |
+| `Other Packages`               | `Architecture`  | `Required By`                      |
 |--------------------------------|-----------------|------------------------------------|
-| `asciiquarium 1.1`             | `i586 / x86_64` | `Sea Animation in ASCII Art`       |
-| `ccat 1.1.0`                   | `i586 / x86_64` | `Colorized cat`                    |
-| `cmatrix 2.0`                  | `i586 / x86_64` | `Matrix in Terminal`               |
-| `cowsay 3.04`                  | `i586 / x86_64` | `Configurable Talking Cow`         |
-| `Fortune Mod 2.12.0`           | `i586 / x86_64` | `View Phrases in Terminal`         |
-| `Fortune Mod Br 20160820`      | `No Arch`       | `Language PT-BR for fortune-mod`   |
-| `grc 1.12`                     | `i586 / x86_64` | `Colorized Commands`               |
-| `Luna Wallpapers 0.2`          | `No Arch`       | `Elementary Wallpapers`            |
-| `Mandriva Cursor 2.0 `         | `No Arch`       |                                    |
-| `sl 5.0.2`                     | `i586 / x86_64` |                                    |
-| `____________________________` | `_____________` | `________________________________` |
+| `Aria2 1.35.0`                 | `i586 / x86_64` | `UGet`                             |
+| `cab-extract 1.9.1`            | `i586 / x86_64` |                                    |
+| `DPKG 1.20.9`                  | `i586 / x86_64` |                                    |
+| `lcab 1.0b12`                  | `i586 / x86_64` |                                    |
+| `Molotov 1.2`                  | `i586 / x86_64` |                                    |
+| `NoSync Browser 1.1`           | `i586 / x86_64` |                                    |
+| `Refine 2.0`                   | `i586 / x86_64` |                                    |
+| `perl-Curses 1.37`             | `i586 / x86_64` | `perl-Term-Animation`              |
+| `perl-Term-Animation 2.6`      | `i586 / x86_64` | `asciiquarium`                     |
+| `Windscribe Cli 1.4_52`        | `x86_64`        |                                    |
+| `Zenity 3.32.0`                | `i586 / x86_64` |                                    |
+| `............................` | `.............` | `................................` | 
 
 <br/>
 
