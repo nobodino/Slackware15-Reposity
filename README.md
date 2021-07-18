@@ -22,18 +22,18 @@ Feel at ease to install the packages you need.
 | `MPV 0.33.1`                   | `i586 / x86_64` | `Multimedia Player`                | `Hypnotix`    |
 | `Notable 1.8.4`                | `x86_64`        | `Note editor using Markdown`       |               |
 | `Nulloy 0.8.2_112`             | `i586 / x86_64` | `Audio Player`                     |               |
-| `Ocenaudio 3.10.9`             | `i586 / x86_64` | `Audio Editor`                     |               |
+| `Ocenaudio 3.10.10`            | `i586 / x86_64` | `Audio Editor`                     |               |
 | `PhotoQT 2.3`                  | `i586 / x86_64` | `Image Viewer`                     |               |
 | `Pluto TV 1.1`                 | `x86_64`        | `Unofficial WebApp for Pluto TV`   |               |
 | `qBittorrent 4.3.6`            | `i586 / x86_64` | `Torrent Client`                   |               |
 | `QMPlay2 21.06.07`             | `i586 / x86_64` | `Multimedia Player`                |               |
 | `SoftMaker FreeOffice 2018`    | `x86_64`        | `Office Suite`                     |               |
 | `Spotify 1.1.56.595`           | `x86_64`        | `Streaming Music player`           |               |
-| `Telegram 2.8.1`               | `x86_64`        | `WhatsApp Alternative`             |               |
+| `Telegram 2.8.8`               | `x86_64`        | `WhatsApp Alternative`             |               |
 | `UGet 2.2.3`                   | `i586 / x86_64` | `Torrent and Download Manager`     |               |
 | `UMPlayer 0.9.8`               | `x86_64`        | `Multimedia Player`                |               |
 | `VSCodium 1.58.2`              | `x86_64`        | `IDE for Various Languages`        |               |
-| `Vim 8.2.3075`                 | `i586 / x86_64` | `Best Command Line Text Editor`    |               |
+| `Vim 8.2.3161`                 | `i586 / x86_64` | `Best Command Line Text Editor`    |               |
 | `WhatsApp Desktop 0.6.1`       | `x86_64`        | `Unofficial WebApp for WhatsApp`   |               |
 | `............................` | `.............` | `................................` | `...........` |
 
@@ -68,7 +68,7 @@ Feel at ease to install the packages you need.
 | `python3-MarkupSafe 2.0.1`     | `i586 / x86_64` | `python3-Jinja2`                   |
 | `python3-setproctitle 1.2.2`   | `i586 / x86_64` | `Hypnotix`                         |
 | `python3-pythondialog 3.5.2`   | `i586 / x86_64` | `protonvpn-cli`                    |
-| `python3-xlib 0.30`            | `i586 / x86_64` | `Kazam`                            |
+| `python3-xlib 0.31`            | `i586 / x86_64` | `Kazam`                            |
 | `............................` | `.............` | `................................` |
 
 <br/><br/>
@@ -103,13 +103,13 @@ Feel at ease to install the packages you need.
 |--------------------------------|-----------------|------------------------------------|
 | `allegro4 4.4.2`               | `i586 / x86_64` | `opensonic`                        |
 | `GraphicsMagick 1.3.36`        | `i586 / x86_64` | `PhotoQT`                          |
-| `GST Plugins Bad 1.18.2`       | `i586 / x86_64` | `Nulloy, Transmageddon`            |
-| `GST Plugins Ugly 1.18.2`      | `i586 / x86_64` | `Nulloy, Transmageddon`            |
-| `jack 1.9.18`                  | `i586 / x86_64` | `Ocenaudio`                        |
+| `GST Plugins Bad 1.18.4`       | `i586 / x86_64` | `Nulloy, Transmageddon`            |
+| `GST Plugins Ugly 1.18.4`      | `i586 / x86_64` | `Nulloy, Transmageddon`            |
+| `jack 1.9.19`                  | `i586 / x86_64` | `Ocenaudio`                        |
 | `libass 0.15.1`                | `i586 / x86_64` | `QMPlay2, MPV`                     |
 | `libgme 0.6.3`                 | `i586 / x86_64` | `QMPlay2`                          |
 | `libgnomekbd 3.26.1`           | `i586 / x86_64` | `Xapp`                             |
-| `libplacebo 2.72.2`            | `i586 / x86_64` | `MPV`                              |
+| `libplacebo 3.120.3`           | `i586 / x86_64` | `MPV`                              |
 | `libqpsd 2.2.1`                | `i586 / x86_64` | `PhotoQT`                          |
 | `libsidplayfp 2.2.0`           | `i586 / x86_64` | `QMPlay2`                          |
 | `libtorrent-rasterbar 2.0.4`   | `i586 / x86_64` | `qBittorrent`                      |
