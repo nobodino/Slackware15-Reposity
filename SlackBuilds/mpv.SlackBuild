@@ -6,6 +6,7 @@
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
+[ ! "$(ls /var/log/packages/libass*     2>&-)" ] && { echo -e "\nDependência Faltante: libass !     \n"; ERRO=1; }
 [ ! "$(ls /var/log/packages/libplacebo* 2>&-)" ] && { echo -e "\nDependência Faltante: libplacebo ! \n"; ERRO=1; }
 [ ! "$(ls /var/log/packages/lua*        2>&-)" ] && { echo -e "\nDependência Faltante: lua !        \n"; ERRO=1; }
 [ ! "$(ls /var/log/packages/mujs*       2>&-)" ] && { echo -e "\nDependência Faltante: mujs !       \n"; ERRO=1; }
@@ -30,6 +31,7 @@ TMP=/tmp
 PKG=$TMP/package-$PRGNAM
 LINK1=https://github.com/mpv-player/mpv/archive/v0.33.1/mpv-0.33.1.tar.gz
 LINK2=https://waf.io/waf-2.0.22
+LINK3=https://github.com/mpv-player/mpv/commit/7c4465cefb27d4e0d07535d368febdf77b579566.patch
 
 if [ "$ARCH" = "i586" ]; then
 	SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -49,7 +51,7 @@ else
 fi
 
 set -e
-wget -c $LINK1 $LINK2
+wget -c $LINK1 $LINK2 $LINK3
 rm -rf $PKG $TMP/$PRGNAM-$VERSION
 mkdir -p $PKG/{install,usr/doc/$PRGNAM-$VERSION/manual}
 cd $TMP; tar xvf $CWD/$PRGNAM-$VERSION.tar.?z
@@ -60,7 +62,8 @@ chmod +x waf
 chown -R root:root .
 chmod -R u+w,go+r-w,a+X-s .
 
-MANUAL="DOCS/*.md DOCS/*.rst DOCS/*.txt"
+patch -Np1 -i $CWD/7c4465cefb27d4e0d07535d368febdf77b579566.patch
+
 BUILD_OPTS=${BUILD_OPTS:-""}
 PKG_CONFIG_PATH="/usr/lib${LIBDIRSUFFIX}/ffmpeg4/pkgconfig"
 export PKG_CONFIG_PATH

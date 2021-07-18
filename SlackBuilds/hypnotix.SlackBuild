@@ -10,7 +10,7 @@
 [ ! "$(ls /var/log/packages/python3-imdbpy*       2> /dev/null)" ] && { echo -e "\nDependência Faltante: python3-imdbpy !      \n"; ERRO=1; }
 [ ! "$(ls /var/log/packages/python3-setproctitle* 2> /dev/null)" ] && { echo -e "\nDependência Faltante: python3-setproctitle !\n"; ERRO=1; }
 [ ! "$(ls /var/log/packages/xapp*                 2> /dev/null)" ] && { echo -e "\nDependência Faltante: xapp !                \n"; ERRO=1; }
-[ $ERRO = 1 ] && exit 1
+[ "$ERRO" = 1 ] && exit 1
 
 PRGNAM=hypnotix
 VERSION=1.5

@@ -12,7 +12,6 @@ Feel at ease to install the packages you need.
 
 | `Softwares`                    | `Architecture`  | `Packages Description`             | `Required By` |
 |--------------------------------|-----------------|------------------------------------|---------------|
-| `CLion 2021.1`                 | `No Arch`       | `IDE for C/C++`                    |               |
 | `CodeBlocks 20.03`             | `i586 / x86_64` | `IDE for C/C++`                    |               |
 | `Discord 0.0.15`               | `x86_64`        | `Internet Messenger`               |               |
 | `Eclipce-Jee 4.18 (2020-12)`   | `x86_64`        | `IDE for Java JEE`                 |               |
@@ -33,7 +32,7 @@ Feel at ease to install the packages you need.
 | `Telegram 2.8.1`               | `x86_64`        | `WhatsApp Alternative`             |               |
 | `UGet 2.2.3`                   | `i586 / x86_64` | `Torrent and Download Manager`     |               |
 | `UMPlayer 0.9.8`               | `x86_64`        | `Multimedia Player`                |               |
-| `VSCodium 1.57.1`              | `x86_64`        | `IDE for Various Languages`        |               |
+| `VSCodium 1.58.2`              | `x86_64`        | `IDE for Various Languages`        |               |
 | `Vim 8.2.3075`                 | `i586 / x86_64` | `Best Command Line Text Editor`    |               |
 | `WhatsApp Desktop 0.6.1`       | `x86_64`        | `Unofficial WebApp for WhatsApp`   |               |
 | `............................` | `.............` | `................................` | `...........` |
@@ -42,6 +41,7 @@ Feel at ease to install the packages you need.
 
 | `Java Softwares`               | `Architecture`  | `Packages Description`             |
 |--------------------------------|-----------------|------------------------------------|
+| `CLion 2021.1.3`               | `No Arch`       | `IDE for C/C++`                    |
 | `Frostwire 6.9.4`              | `x86_64`        | `P2P Bittorrent Downloader`        |
 | `JDownloader2 2.0`             | `x86_64`        | `Download Manager`                 |
 | `Oracle JDK16 16.0.1`          | `x86_64`        | `Virtual Machine Java`             |
@@ -76,7 +76,7 @@ Feel at ease to install the packages you need.
 | `Games`                        | `Architecture`  | `Packages Description`             |
 |--------------------------------|-----------------|------------------------------------|
 | `OpenSonic 0.1.4`              | `i586 / x86_64` | `Sonic Open Source`                |
-| `Flare Game 1.11`              | `i586 / x86_64` | `RPG Game / Include Engine`        |
+| `Flare Game 1.12`              | `i586 / x86_64` | `RPG Game / Include Engine`        |
 | `Quake2 8.00`                  | `i586 / x86_64` | `FPS Game`                         |
 | `............................` | `.............` | `................................` |
 
@@ -102,7 +102,6 @@ Feel at ease to install the packages you need.
 | `Libraries`                    | `Architecture`  | `Required By`                      |
 |--------------------------------|-----------------|------------------------------------|
 | `allegro4 4.4.2`               | `i586 / x86_64` | `opensonic`                        |
-| `c-ares 1.17.1`                | `i586 / x86_64` | `Aria2`                            |
 | `GraphicsMagick 1.3.36`        | `i586 / x86_64` | `PhotoQT`                          |
 | `GST Plugins Bad 1.18.2`       | `i586 / x86_64` | `Nulloy, Transmageddon`            |
 | `GST Plugins Ugly 1.18.2`      | `i586 / x86_64` | `Nulloy, Transmageddon`            |

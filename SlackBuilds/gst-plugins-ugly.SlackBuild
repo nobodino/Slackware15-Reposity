@@ -8,7 +8,7 @@
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
 
 PRGNAM=gst-plugins-ugly
-VERSION=1.18.3
+VERSION=1.18.4
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
@@ -24,7 +24,7 @@ CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
 NUMJOBS=${NUMJOBS:-" -j$(expr $(nproc) + 1) "}
-LINK=https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.18.3.tar.xz
+LINK=https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.18.4.tar.xz
 
 if [ "$ARCH" = "i586" ]; then
 	SLKCFLAGS="-O2 -march=i586 -mtune=i686"

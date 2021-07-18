@@ -260,8 +260,7 @@ O *gst-plugins-ugly* e o *gst-plugins-bad* são dependências opcionais. Caso qu
 ### Instalação UGet
 
 O *UGet* é um gerenciador de downloads com suporte a torrent.
-Mas para ter suporte ao torrent, é necessário a dependência opcional *aria2*. Use esses scripts:
+Mas para ter suporte ao torrent, é necessário a dependência opcional *aria2*. Use esse script:
 ```
 - aria2.SlackBuild
-- c-ares.SlackBuild (dependência do aria2)
 ```

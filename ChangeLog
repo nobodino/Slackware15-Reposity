@@ -3,6 +3,40 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2021-07-17 #############################################
+
+### Upgraded / Atualizado
+ - SlackBuilds:
+	- clion.SlackBuild
+	- gst-plugins-bad.SlackBuild
+	- gst-plugins-ugly.SlackBuild
+	- jack.SlackBuild
+	- libplacebo.SlackBuild
+	- ocenaudio.SlackBuild
+	- telegram.SlackBuild
+	- python3-xlib.SlackBuild
+	- vscodium.SlackBuild
+ - Games:
+	- flare-game.SlackBuild
+ - Rebuild:
+	- vim.SlackBuild
+###
+
+### Changed / Modificado
+ - SlackBuilds:
+	- aria2.SlackBuild
+	- mpv.SlackBuild
+	- protonvpn-gui.SlackBuild
+###
+
+### Removed / Removido
+ - SlackBuilds:
+	- c-ares.SlackBuild -> Add in Slackware.
+###
+
+##########################################################################
+
+
 ## [ Released ] - 2021-07-10 #############################################
 
 ### Added / Adicionado
@@ -664,23 +698,6 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 		- Source link verification included.
 	- whatsapp.build
 		- Source link verification included.
-###
-
-##########################################################################
-
-
-## [ Released ] - 2020-12-27 #############################################
-
-### Added / Adicionado
- - script:
-	- googlechrome.build
-	- smoffice2021.build
-	- telegram.build
-	- whatsapp.build
- - Packages:
-	- google-chrome-87.0.4280.88-x86_64-1.txz
-	- telegram-2.5.1-x86_64-1.txz
-	- whatsapp-desktop-0.6.1-x86_64-1.txz
 ###
 
 ##########################################################################

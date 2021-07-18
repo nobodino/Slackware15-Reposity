@@ -6,7 +6,6 @@
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
-[ ! "$(ls /var/log/packages/c-ares* 2>&-)" ] && { echo -e "\nDependência Faltante: c-ares !\n"; exit 1; }
 
 PRGNAM=aria2
 VERSION=1.35.0
