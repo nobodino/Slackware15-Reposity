@@ -3,6 +3,28 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2021-07-22 #############################################
+
+### Added / Adicionado
+ - SlackBuilds:
+	- iptvnator.SlackBuild
+	- youtube-dl.SlackBuild
+ - Games:
+	- FreeImage.SlackBuild
+	- CEGUI07.SlackBuild
+	- smc.SlackBuild
+ - Extra:
+	- Cegui_0.7.9_FIX / CEGUI.patch
+###
+
+### Upgraded / Atualizado
+ - SlackBuilds:
+	- hypnotix.SlackBuild
+###
+
+##########################################################################
+
+
 ## [ Released ] - 2021-07-17 #############################################
 
 ### Upgraded / Atualizado
