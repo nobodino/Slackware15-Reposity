@@ -19,6 +19,7 @@ Feel at ease to install the packages you need.
 | `FlareGet 5.0.0`               | `i586 / x86_64` | `Multisegment Download Manager`    |               |
 | `Google Chrome Current`        | `x86_64`        | `Web Browser`                      |               |
 | `Google Earth Pro Current`     | `x86_64`        | `3D Planet Viewer`                 |               |
+| `IPTVnator 0.8.0`              | `x86_64`        | `Free IPTV`                        |               |
 | `MPV 0.33.1`                   | `i586 / x86_64` | `Multimedia Player`                | `Hypnotix`    |
 | `Notable 1.8.4`                | `x86_64`        | `Note editor using Markdown`       |               |
 | `Nulloy 0.8.2_112`             | `i586 / x86_64` | `Audio Player`                     |               |
@@ -51,11 +52,12 @@ Feel at ease to install the packages you need.
 
 | `Python Softwares`             | `Architecture`  | `Packages Description`             |
 |--------------------------------|-----------------|------------------------------------|
-| `Hypnotix 1.5`                 | `i586 / x86_64` | `Free IPTV`                        |
+| `Hypnotix 2.0`                 | `i586 / x86_64` | `Free IPTV`                        |
 | `Kazam 1.5.4`                  | `i586 / x86_64` | `Screenshot and Screencast`        |
 | `protonvpn-cli 2.2.11`         | `i586 / x86_64` | `Cli for ProtonVPN`                |
 | `protonvpn-gui 2.1.1`          | `i586 / x86_64` | `GUI for ProtonVPN`                |
 | `Transmageddon 1.5`            | `i586 / x86_64` | `Video Format Conversion Tool`     |
+| `youtube-dl 2021.06.06`        | `i586 / x86_64` | `Youtube Tool for Command Line`    |
 | `............................` | `.............` | `................................` |
 
 | `Python Modules`               | `Architecture`  | `Required By`                      |
@@ -66,8 +68,8 @@ Feel at ease to install the packages you need.
 | `python3-imdbpy 2021.4.18`     | `i586 / x86_64` | `Hypnotix`                         |
 | `python3-Jinja2 3.0.1`         | `i586 / x86_64` | `protonvpn-cli`                    |
 | `python3-MarkupSafe 2.0.1`     | `i586 / x86_64` | `python3-Jinja2`                   |
-| `python3-setproctitle 1.2.2`   | `i586 / x86_64` | `Hypnotix`                         |
 | `python3-pythondialog 3.5.2`   | `i586 / x86_64` | `protonvpn-cli`                    |
+| `python3-setproctitle 1.2.2`   | `i586 / x86_64` | `Hypnotix`                         |
 | `python3-xlib 0.31`            | `i586 / x86_64` | `Kazam`                            |
 | `............................` | `.............` | `................................` |
 
@@ -77,9 +79,16 @@ Feel at ease to install the packages you need.
 |--------------------------------|-----------------|------------------------------------|
 | `OpenSonic 0.1.4`              | `i586 / x86_64` | `Sonic Open Source`                |
 | `Flare Game 1.12`              | `i586 / x86_64` | `RPG Game / Include Engine`        |
+| `smc 20140328`                 | `i586 / x86_64` | `Mario Open Source`                |
 | `Quake2 8.00`                  | `i586 / x86_64` | `FPS Game`                         |
 | `............................` | `.............` | `................................` |
 
+| `Libraries for Games`          | `Architecture`  | `Required By`                      |
+|--------------------------------|-----------------|------------------------------------|
+| `allegro4 4.4.2`               | `i586 / x86_64` | `opensonic`                        |
+| `CEGUI07 0.7.9`                | `i586 / x86_64` | `smc`                              |
+| `FreeImage 3.18.0`             | `i586 / x86_64` | `CEGUI07`                          |
+| `............................` | `.............` | `................................` |
 
 <br/><br/>
 
@@ -101,7 +110,6 @@ Feel at ease to install the packages you need.
 
 | `Libraries`                    | `Architecture`  | `Required By`                      |
 |--------------------------------|-----------------|------------------------------------|
-| `allegro4 4.4.2`               | `i586 / x86_64` | `opensonic`                        |
 | `GraphicsMagick 1.3.36`        | `i586 / x86_64` | `PhotoQT`                          |
 | `GST Plugins Bad 1.18.4`       | `i586 / x86_64` | `Nulloy, Transmageddon`            |
 | `GST Plugins Ugly 1.18.4`      | `i586 / x86_64` | `Nulloy, Transmageddon`            |
