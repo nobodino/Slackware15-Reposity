@@ -9,7 +9,7 @@
 
 PRGNAM=wxGTK3
 SRCNAM=wxWidgets
-VERSION=3.0.5
+VERSION=3.0.5.1
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
@@ -24,7 +24,7 @@ WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK=https://github.com/wxWidgets/wxWidgets/archive/v3.0.5/wxWidgets-3.0.5.tar.gz
+LINK=https://github.com/wxWidgets/wxWidgets/archive/v3.0.5.1/wxWidgets-3.0.5.1.tar.gz
 
 if [ "$ARCH" = "i586" ]; then
 	SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -43,25 +43,6 @@ else
 	LIBDIRSUFFIX=""
 fi
 
-if [ "${STL}:-no" = "yes" ]; then
-	stl="--enable-stl"
-else
-	stl=""
-fi
-
-webkit=`pkg-config --exists webkit-1.0`
-if [ "$?" -eq 0 ]; then
-	wk="--enable-webkit"
-else
-	wk=""
-fi
-
-if [ "${STATIC}:-no" = "yes" ]; then
-	st="--disable-shared"
-else
-	st="--enable-shared"
-fi
-
 set -e
 wget -c $LINK
 rm -rf $PKG $TMP/$SRCNAM-$VERSION
@@ -77,6 +58,9 @@ CXXFLAGS="$SLKCFLAGS" \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
+  --localstatedir=/var \
+  --mandir=/usr/man \
+  --infodir=/usr/info \
   --enable-mediactrl \
   --with-opengl \
   --enable-graphics_ctx \
@@ -85,13 +69,53 @@ CXXFLAGS="$SLKCFLAGS" \
   --enable-plugins \
   --enable-ipv6 \
   --enable-webview \
-  $wk \
-  $stl \
-  $st \
+  --with-sdl \
+  --with-libmspack \
+  --enable-shared \
+  --with-libxpm=sys \
+  --with-libjpeg=sys \
+  --with-libtiff=sys \
+  --disable-precomp-headers \
+  --enable-webviewwebkit \
   --build=$ARCH-slackware-linux
-make; make install DESTDIR=$PKG
+make; make -C locale allmo; make install DESTDIR=$PKG
 
-find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
+rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
+mv $PKG/usr/bin/wx-config{,-gtk2}
+rm -r $PKG/usr/{include,share,lib$LIBDIRSUFFIX/libwx_base*,bin/wxrc*}
+
+make clean
+CFLAGS="$SLKCFLAGS" \
+CXXFLAGS="$SLKCFLAGS" \
+./configure \
+  --prefix=/usr \
+  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --sysconfdir=/etc \
+  --localstatedir=/var \
+  --mandir=/usr/man \
+  --infodir=/usr/info \
+  --enable-mediactrl \
+  --with-opengl \
+  --enable-graphics_ctx \
+  --with-gtk=3 \
+  --enable-unicode \
+  --enable-plugins \
+  --enable-ipv6 \
+  --enable-webview \
+  --with-sdl \
+  --with-libmspack \
+  --enable-shared \
+  --with-libxpm=sys \
+  --with-libjpeg=sys \
+  --with-libtiff=sys \
+  --disable-precomp-headers \
+  --enable-webviewwebkit \
+  --build=$ARCH-slackware-linux
+make; make -C locale allmo; make install DESTDIR=$PKG
+
+rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
+find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
+find $PKG | xargs file | grep "current ar archive" | cut -f 1 -d : | xargs strip -g 2> /dev/null || true
 cp -a docs/* $PKG/usr/doc/$PRGNAM-$VERSION
 
 if [ "${STATIC}:-no" = "yes" ]; then

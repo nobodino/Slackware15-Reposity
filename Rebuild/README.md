@@ -1,9 +1,7 @@
 # Slackware15-Reposity Rebuild
-*Scripts criados para gerar os pacotes TXZ para o Slackware 15.0+.*
+*Packages Rebuild for Slackware 15.0 Stable ( x86_64 / i586 ).*
+<br/><br/>
 
-<br/>
+Slackbuilds of packages already present in Slackware, but which for some reason need to be recompiled.
 
-Esses scripts foram baseados em sua maioria, nos scripts do repositório do Slackbuilds do Slackware.<br/>
-Esse diretório conterá Slackbuilds de pacotes já presentes no Slackware, mas que por algum motivo precisa ser recompilado.
-
-- vim.SlackBuild: Suporte para Clipboard.
+- vim.SlackBuild: Clipboard Support.

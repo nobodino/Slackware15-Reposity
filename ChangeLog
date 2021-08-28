@@ -3,6 +3,70 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2021-08-04 #############################################
+
+### Added / Adicionado
+ - SlackBuilds:
+	- acetoneiso.SlackBuild
+	- cdrkit.SlackBuild
+	- espeak.SlackBuild
+	- fuseiso.SlackBuild
+	- gtkdialog.SlackBuild
+	- p7zip.SlackBuild
+	- rar.SlackBuild
+ - Extra:
+	- cdrkit_1.1.11_FIX:
+		- cdrkit-1.1.10-build-fix.patch
+		- cdrkit-1.1.11-cmakewarn.patch
+		- cdrkit-1.1.11-devname.patch
+		- cdrkit-1.1.11-dvdman.patch
+		- cdrkit-1.1.11-format.patch
+		- cdrkit-1.1.11-gcc10.patch
+		- cdrkit-1.1.11-handler.patch
+		- cdrkit-1.1.11-manpagefix.patch
+		- cdrkit-1.1.11-memset.patch
+		- cdrkit-1.1.11-paranoiacdda.patch
+		- cdrkit-1.1.11-ppc64le_elfheader.patch
+		- cdrkit-1.1.11-readsegfault.patch
+		- cdrkit-1.1.11-rootstat.patch
+		- cdrkit-1.1.11-sysmacros.patch
+		- cdrkit-1.1.11-usalinst.patch
+		- cdrkit-1.1.11-utf8.patch
+		- cdrkit-1.1.11-werror_gcc5.patch
+		- cdrkit-1.1.8-werror.patch
+		- cdrkit-1.1.9-buffer_overflow.patch
+		- cdrkit-1.1.9-efi-boot.patch
+		- cdrkit-1.1.9-no_mp3.patch
+		- cdrkit-1.1.9-wformat-error.patch
+	- P7Zip_17.04_FIX:
+		- fix_ambiguous1.patch
+		- fix_ambiguous2.patch
+		- fix_ambiguous3.patch
+		- fix_ambiguous4.patch
+		- fix_kZSTD.patch
+###
+
+### Upgraded / Atualizado
+ - SlackBuilds:
+	- aria2.SlackBuild
+	- grc.SlackBuild
+	- jdk16.SlackBuild
+	- libsidplayfp.SlackBuild
+	- ocenaudio.SlackBuild
+	- perl-Curses.SlackBuild
+	- qbittorrent.SlackBuild
+	- telegram.SlackBuild
+	- vscodium.SlackBuild
+###
+
+### Changed / Modificado
+ - SlackBuilds:
+	- qbittorrent.SlackBuild
+###
+
+##########################################################################
+
+
 ## [ Released ] - 2021-07-22 #############################################
 
 ### Added / Adicionado
@@ -687,39 +751,6 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 	- whatsapp.build
 		- Changes to instructions after generating the package.
 		- Script improvements Post-installation.
-###
-
-##########################################################################
-
-
-## [ Released ] - 2020-12-31 #############################################
-
-### Added / Adicionado
- - script:
-	- aria2.build
-	- c-ares.build
-	- frostwire.build
-	- jdk15.build
-	- uget.build
- - Packages:
-	- aria2-1.35.0-x86_64-1.txz
-	- c-ares-1.17.1-x86_64-1.txz
-	- frostwire-6.8.10-x86_64-1.txz
-	- uget-2.2.3_1-x86_64-1.txz
- - Extra:
-	- checklink
-###
-
-### Fixed / Corrigido
- - script:
-	- googlechrome.build
-		- Source link verification included.
-	- smoffice2021.build
-		- Source link verification included.
-	- telegram.build
-		- Source link verification included.
-	- whatsapp.build
-		- Source link verification included.
 ###
 
 ##########################################################################

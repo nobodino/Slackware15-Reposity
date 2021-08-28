@@ -8,7 +8,7 @@
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
 
 PRGNAM=grc
-VERSION=1.12
+VERSION=1.13
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
@@ -23,7 +23,7 @@ WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK=https://github.com/garabik/grc/archive/refs/tags/v1.12.tar.gz
+LINK=https://github.com/garabik/grc/archive/refs/tags/v1.13.tar.gz
 
 set -e
 wget -c -O $PRGNAM-$VERSION.tar.gz $LINK

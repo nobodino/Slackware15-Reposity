@@ -6,6 +6,10 @@
 Esses scripts foram baseados em sua maioria, nos scripts do repositório do Slackbuilds do Slackware.
 O objetivo é tentar manter os pacotes sempre com as últimas atualizações e os mantendo funcionais para a última versão do Slackware.
 
+### Instalação AcetoneISO
+
+AAA.
+
 ### Instalação AscIIQuarium
 
 O *AscIIQuarium* é uma animação marítima feito para rodar no Terminal.
@@ -51,6 +55,7 @@ Possui as dependências a seguir:
 - python-requests          : Já Instalado.
 - python-imdbpy            : Não Instalado. ( python3-imdbpy ).
 - python-setproctitle      : Não Instalado. ( python3-setproctitle ).
+- youtube-dl               : Opcional.
 
 - libxapp --> xapp : Não Instalado.
 - libmpv  --> mpv  : Não Instalado.
@@ -61,6 +66,7 @@ Use as instruções para a Instalação do *MPV* e, use esses script:
 - python3-imdbpy.SlackBuild
 - python3-setproctitle.SlackBuild
 - xapp.SlackBuild
+- youtube-dl.SlackBuild
 - libgnomekbd.SlackBuild (dependência do xapp)
 ```
 
