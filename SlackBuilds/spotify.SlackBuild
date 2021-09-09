@@ -10,8 +10,7 @@
 
 PRGNAM=spotify
 SRCNAM=spotify-client
-VERSION=1.1.56.595
-DEBARCH=g2d2da0de_amd64
+VERSION=1.1.67.586
 ARCH=x86_64
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
@@ -21,13 +20,13 @@ WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK=http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.1.56.595.g2d2da0de_amd64.deb
+LINK=http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.1.67.586.gbb5ef64e_amd64.deb
 
 set -e
 wget -c $LINK
 rm -rf $PKG
 mkdir -p $PKG/{install,usr/{share/{applications,$PRGNAM/lib},doc/$PRGNAM-$VERSION}}
-cd $PKG; ar -p $CWD/${SRCNAM}_${VERSION}.${DEBARCH}.deb data.tar.gz | tar zxv
+cd $PKG; ar -p $CWD/${SRCNAM}_${VERSION}*.deb data.tar.gz | tar zxv
 chown -R root:root .
 chmod -R u+w,go+r-w,a+X-s .
 rm $PKG/usr/bin/$PRGNAM

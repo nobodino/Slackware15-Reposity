@@ -3,6 +3,39 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2021-09-08 #############################################
+
+### Added / Adicionado
+ - Electron:
+	- Created Directory for Electron Programs.
+ - Java:
+	- Created Directory for Java Programs.
+ - Python:
+	- Created Directory for Python Programs.
+###
+
+### Upgraded / Atualizado
+ - Electron:
+	- vscodium.SlackBuild
+ - Java:
+	- clion.SlackBuild
+	- frostwire.SlackBuild
+ - SlackBuilds:
+	- refine.SlackBuild
+	- spotify.SlackBuild
+###
+
+### Fixed / Corrigido
+ - Games:
+	- FreeImage.SlackBuild
+ - Java:
+	- JDownloader2.SlackBuild
+		- Fix execution in Default User.
+###
+
+##########################################################################
+
+
 ## [ Released ] - 2021-08-04 #############################################
 
 ### Added / Adicionado

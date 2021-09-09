@@ -23,10 +23,10 @@ Feel at ease to install the packages you need.
 | `Ocenaudio 3.10.12`            | `i586 / x86_64` | `Audio Editor`                     |               |
 | `P7Zip 17.04`                  | `i586 / x86_64` | `Complete 7z for Linux, Inc. GUI`  | `AcetoneISO`  |
 | `PhotoQT 2.3`                  | `i586 / x86_64` | `Image Viewer`                     |               |
-| `qBittorrent 4.3.6`            | `i586 / x86_64` | `Torrent Client`                   |               |
+| `qBittorrent 4.3.7`            | `i586 / x86_64` | `Torrent Client`                   |               |
 | `QMPlay2 21.06.07`             | `i586 / x86_64` | `Multimedia Player`                |               |
 | `SoftMaker FreeOffice 2018`    | `x86_64`        | `Office Suite`                     |               |
-| `Spotify 1.1.56.595`           | `x86_64`        | `Streaming Music player`           |               |
+| `Spotify 1.1.57.685`           | `x86_64`        | `Streaming Music player`           |               |
 | `Telegram 2.8.8`               | `x86_64`        | `WhatsApp Alternative`             |               |
 | `UGet 2.2.3`                   | `i586 / x86_64` | `Torrent and Download Manager`     |               |
 | `UMPlayer 0.9.8`               | `x86_64`        | `Multimedia Player`                |               |
@@ -42,7 +42,7 @@ Feel at ease to install the packages you need.
 | `IPTVnator 0.8.0`              | `x86_64`        | `Free IPTV`                        |
 | `Notable 1.8.4`                | `x86_64`        | `Note editor using Markdown`       |
 | `Pluto TV 1.1`                 | `x86_64`        | `Unofficial WebApp for Pluto TV`   |
-| `VSCodium 1.59.1`              | `x86_64`        | `IDE for Various Languages`        |
+| `VSCodium 1.60.0`              | `x86_64`        | `IDE for Various Languages`        |
 | `WhatsApp Desktop 0.6.1`       | `x86_64`        | `Unofficial WebApp for WhatsApp`   |
 | `............................` | `.............` | `................................` |
 
@@ -50,8 +50,8 @@ Feel at ease to install the packages you need.
 
 | `Java Softwares`               | `Architecture`  | `Packages Description`             |
 |--------------------------------|-----------------|------------------------------------|
-| `CLion 2021.1.3`               | `No Arch`       | `IDE for C/C++`                    |
-| `Frostwire 6.9.4`              | `x86_64`        | `P2P Bittorrent Downloader`        |
+| `CLion 2021.2.1`               | `No Arch`       | `IDE for C/C++`                    |
+| `Frostwire 6.9.5`              | `x86_64`        | `P2P Bittorrent Downloader`        |
 | `JDownloader2 2.0`             | `x86_64`        | `Download Manager`                 |
 | `Oracle JDK16 16.0.2`          | `x86_64`        | `Virtual Machine Java`             |
 | `............................` | `.............` | `................................` |
@@ -155,7 +155,7 @@ Feel at ease to install the packages you need.
 | `Molotov 1.2`                  | `i586 / x86_64` |                                    |
 | `NoSync Browser 1.1`           | `i586 / x86_64` |                                    |
 | `RAR 6.02`                     | `x86_64`        | `AcetoneISO`                       |
-| `Refine 2.0`                   | `i586 / x86_64` |                                    |
+| `Refine 3.1`                   | `i586 / x86_64` |                                    |
 | `perl-Curses 1.38`             | `i586 / x86_64` | `perl-Term-Animation`              |
 | `perl-Term-Animation 2.6`      | `i586 / x86_64` | `asciiquarium`                     |
 | `Windscribe Cli 1.4_52`        | `x86_64`        |                                    |

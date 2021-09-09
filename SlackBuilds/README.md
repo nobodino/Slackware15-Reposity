@@ -35,14 +35,6 @@ Mas, é necessário instalar sua dependência, o *recode*. Use esse script:
 - recode.SlackBuild
 ```
 
-### Instalação do FrostWire
-
-O cliente P2P *FrostWire* possui como dependência mínima para ser executado o *JDK11*.
-Portanto, para ele poder funcionar é necessário instalar o *JDK11* ou superior. Use esse script:
-```
-- jdk16.SlackBuild
-```
-
 ### Instalação Hypnotix
 
 O *Hypnotix* é um aplicativo de IPTV feito pelo Linux Mint e para o Cinnamon.
@@ -68,14 +60,6 @@ Use as instruções para a Instalação do *MPV* e, use esses script:
 - xapp.SlackBuild
 - youtube-dl.SlackBuild
 - libgnomekbd.SlackBuild (dependência do xapp)
-```
-
-### Instalação do JDownloader2
-
-O *JDownloader2* é um Gerenciador de Download criado para ser executado no Java.
-Portanto, para ele poder funcionar é necessário instalar uma versão do JDK. Use esse script:
-```
-- jdk16.SlackBuild
 ```
 
 ### Instalação Kazam
