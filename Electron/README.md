@@ -1,4 +1,4 @@
-# Slackware15-Reposity Games
+# Slackware15-Reposity Electron
 *Electron-based programs slackbuilds for Slackware 15.0 Stable ( x86_64 / i586 ).*
 
 SlackBuilds Repository specific for electron-based programs.

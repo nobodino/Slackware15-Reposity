@@ -1,7 +1,7 @@
-# Slackware15-Reposity Games
-*Electron-based programs slackbuilds for Slackware 15.0 Stable ( x86_64 / i586 ).*
+# Slackware15-Reposity Java
+*Java-based programs slackbuilds for Slackware 15.0 Stable ( x86_64 / i586 ).*
 
-SlackBuilds Repository specific for electron-based programs.
+SlackBuilds Repository specific for java-based programs.
 
 ### CLion Installation
 
