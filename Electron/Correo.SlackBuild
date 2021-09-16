@@ -1,7 +1,7 @@
 #!/bin/sh
 # Software
 
-# Slackware build script for discord
+# Slackware build script for correo
 
 # Copyright 2021 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.
@@ -9,45 +9,54 @@
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
 [ "`uname -m`" != x86_64 ] && { echo -e "\n Not Support !\n"; exit 1; }
 
-PRGNAM=discord
-VERSION=0.0.15
+PRGNAM=Correo
+VERSION=1.0.6
 ARCH=x86_64
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
-WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
+WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM 
 
 CWD=$PWD
-TMP=/tmp
-PKG=$TMP/package-$PRGNAM
-LINK=https://dl.discordapp.net/apps/linux/0.0.15/discord-0.0.15.tar.gz
+PKG=/tmp/package-$PRGNAM
+LINK1=https://github.com/mxnt10/Slackware15-Reposity/releases/download/Release/Correo-1.0.6.tar.xz
 
 set -e
-wget -c $LINK
-rm -rf $PKG
-mkdir -p $PKG/{install,opt/$PRGNAM,usr/{bin,share/{applications,pixmaps}}}
-cd $TMP; tar xvf $CWD/$PRGNAM-$VERSION.tar.?z
-cd Discord; chown -R root:root .
+wget -c $LINK1
+rm -rf $PKG $TMP
+mkdir -p $TMP $PKG/{install,opt,usr/{lib64/Correo,bin,share/{applications,pixmaps}}}
+cd $PKG/opt; tar xvf $CWD/$PRGNAM-$VERSION.tar.?z*
+cd $PRGNAM-$VERSION
+chown -R root:root .
 chmod -R u+w,go+r-w,a+X-s .
 
-ln -sf /opt/$PRGNAM/Discord $PKG/usr/bin/
-sed -i "s|/usr/share/discord/||" $PRGNAM.desktop
-cp -a * $PKG/opt/$PRGNAM
-cp -a $PRGNAM.desktop $PKG/usr/share/applications
-cp -a $PRGNAM.png $PKG/usr/share/pixmaps
+cd $PKG
+chmod +x opt/$PRGNAM-$VERSION/$PRGNAM
+ln -s /opt/$PRGNAM-$VERSION/$PRGNAM $PKG/usr/bin/correo
+cp -a opt/$PRGNAM-$VERSION/resources/app/res/correo.png $PKG/usr/share/pixmaps
 
-echo "       |-----handy-ruler------------------------------------------------------|
-discord: discord (It's time to ditch Skype and TeamSpeak)
-discord:
-discord: All-in-one voice and text chat for gamers that's free, secure, and
-discord: works on both your desktop and phone. Stop paying for TeamSpeak
-discord: servers and hassling with Skype. Simplify your life.
-discord:
-discord: Homepage: https://discordapp.com/
-discord:
-discord:
-discord:
-discord:" > $PKG/install/slack-desc
+echo "[Desktop Entry]
+Name=Correo
+GenericName=Correo
+Comment=Gmail Client in Tray
+Icon=correo
+Exec=correo
+Terminal=false
+Type=Application
+Categories=Network;" > $PKG/usr/share/applications/$PRGNAM.desktop
+
+echo "      |-----handy-ruler------------------------------------------------------|
+Correo: Correo (A menubar/taskbar Gmail App based on Electron)
+Correo:
+Correo: Runs Gmail right from the Taskbar (in Windows) or from the
+Correo: Menubar (in macOS).
+Correo: Remains active in the tray for quick usage.
+Correo: Uses Gmail's UI for mobile so it's best to use within
+Correo: menubar/taskbar.
+Correo:
+Correo: https://www.electronjs.org/apps/correo
+Correo:
+Correo:" > $PKG/install/slack-desc
 
 echo "if [ -x /usr/bin/update-desktop-database ]; then
 	/usr/bin/update-desktop-database -q usr/share/applications >/dev/null 2>&1
@@ -71,7 +80,7 @@ fi" > $PKG/install/doinst.sh
 
 cd $PKG; /sbin/makepkg -l y -c n $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
 chown -R 1000:users $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
-rm -rf $PKG
+rm -rf $PKG $TMP
 
 cd $CWD
 [ ${TIME:-0} != 0 ] && TIME="-t $TIME" || TIME=

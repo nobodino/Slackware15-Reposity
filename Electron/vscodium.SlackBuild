@@ -1,4 +1,5 @@
 #!/bin/sh
+# Software
 
 # Slackware build script for vscodium
 
@@ -11,7 +12,7 @@
 PRGNAM=vscodium
 SRCNAM=VSCodium
 BINNAM=codium
-VERSION=1.60.0
+VERSION=1.60.1
 ARCH=x86_64
 ARCHTAR=x64
 BUILD=${BUILD:-1}
@@ -22,7 +23,7 @@ WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK=https://github.com/VSCodium/vscodium/releases/download/1.60.0/VSCodium-linux-x64-1.60.0.tar.gz
+LINK=https://github.com/VSCodium/vscodium/releases/download/1.60.1/VSCodium-linux-x64-1.60.1.tar.gz
 
 set -e
 wget -c $LINK

@@ -3,7 +3,18 @@
 
 SlackBuilds Repository specific for electron-based programs.
 
-### Discord Installation
+## Correo Installation
+
+https://www.electronjs.org/apps/correo
+
+A menubar/taskbar Gmail App based on Electron.<br/>
+Uses Gmail's UI for mobile so it's best to use within menubar/taskbar.<br/>
+Install the following SlackBuild:
+```
+- Correo.SlackBuild
+```
+
+## Discord Installation
 
 https://discord.com/
 
@@ -14,7 +25,7 @@ Install the following SlackBuild:
 - discord.SlackBuild
 ```
 
-### Facebook Desktop Installation
+## Facebook Desktop Installation
 
 https://github.com/MauricioFerrari-NovaTrento/Slackware15-Reposity/releases/tag/Release
 
@@ -24,7 +35,7 @@ Install the following SlackBuild:
 - facebook-desktop.SlackBuild
 ```
 
-### IPTVnator Installation
+## IPTVnator Installation
 
 https://github.com/4gray/iptvnator
 
@@ -35,7 +46,7 @@ Install the following SlackBuild:
 - iptvnator.SlackBuild
 ```
 
-### Notable Installation
+## Notable Installation
 
 https://notable.app/
 
@@ -46,7 +57,7 @@ Install the following SlackBuild:
 - notable.SlackBuild
 ```
 
-### PlutoTV Installation
+## PlutoTV Installation
 
 https://github.com/MauricioFerrari-NovaTrento/Slackware15-Reposity/releases/tag/Release
 
@@ -56,7 +67,7 @@ Install the following SlackBuild:
 - pluto-tv.SlackBuild
 ```
 
-### VSCodium Installation
+## VSCodium Installation
 
 https://vscodium.com/
 
@@ -66,7 +77,7 @@ Install the following SlackBuild:
 - vscodium.SlackBuild
 ```
 
-### WhatsApp Desktop Installation
+## WhatsApp Desktop Installation
 
 http://packages.linuxmint.com/pool/import/w/whatsapp-desktop/
 
