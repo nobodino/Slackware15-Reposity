@@ -3,7 +3,7 @@
 
 SlackBuilds Repository specific for java-based programs.
 
-### CLion Installation
+## CLion Installation
 
 https://www.jetbrains.com/clion/
 
@@ -14,7 +14,7 @@ Install the following SlackBuild:
 - clion.SlackBuild
 ```
 
-### FrostWire Installation
+## FrostWire Installation
 
 https://www.frostwire.com/
 
@@ -26,7 +26,7 @@ Install the following SlackBuild:
 - frostwire.SlackBuild
 ```
 
-### JDownloader2 Installation
+## JDownloader2 Installation
 
 https://github.com/4gray/iptvnator
 
@@ -37,7 +37,7 @@ Install the following SlackBuild:
 - JDownloader2.SlackBuild
 ```
 
-### Java Installation
+## Java Installation
 
 https://www.oracle.com/br/java/technologies/javase-jdk16-downloads.html
 
