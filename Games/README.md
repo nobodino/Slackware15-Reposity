@@ -3,7 +3,7 @@
 
 SlackBuilds Repository specific for Games.
 
-### Flare Installation
+## Flare Installation
 
 https://flarerpg.org/
 
@@ -14,7 +14,7 @@ To work, install the following SlackBuilds:
 - flare-game.SlackBuild (Include Engine)
 ```
 
-### OpenSonic Installation
+## OpenSonic Installation
 
 http://opensnc.sourceforge.net/
 
@@ -27,7 +27,7 @@ To work, install the following SlackBuilds:
 - opensonic.SlackBuild ---> Game
 ```
 
-### Secret Maryo Chronicles Installation
+## Secret Maryo Chronicles Installation
 
 http://www.secretmaryo.org/
 
@@ -41,7 +41,7 @@ To work, install the following SlackBuilds:
 - smc.SlackBuild ---> Game
 ```
 
-### Yamagi Quake II Installation
+## Yamagi Quake II Installation
 
 https://www.yamagi.org/quake2/
 
