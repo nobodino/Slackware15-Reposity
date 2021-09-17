@@ -3,7 +3,7 @@
 
 SlackBuilds Repository specific for python-based programs.
 
-### Hypnotix Installation
+## Hypnotix Installation
 
 https://github.com/linuxmint/hypnotix
 
@@ -25,11 +25,11 @@ It has the following dependencies:
 ```
 Use instructions for installing *MPV*:
 ```
-- mpv.SlackBuild (in SlackBuilds)
-- libass.SlackBuild (in SlackBuilds)
-- libplacebo.SlackBuild (in SlackBuilds)
-- lua.SlackBuild  (in SlackBuilds)
-- mujs.SlackBuild (in SlackBuilds)
+- mpv.SlackBuild       \
+- libass.SlackBuild     |
+- libplacebo.SlackBuild |-> (in Softwares)
+- lua.SlackBuild        |
+- mujs.SlackBuild      /
 ```
 To work, install the following SlackBuilds:
 ```
@@ -38,11 +38,11 @@ To work, install the following SlackBuilds:
 - python3-setproctitle.SlackBuild
 - youtube-dl.SlackBuild
 
-- xapp.SlackBuild (in SlackBuilds)
-- libgnomekbd.SlackBuild (in SlackBuilds) (xapp dependency)
+- xapp.SlackBuild        (in Others)
+- libgnomekbd.SlackBuild (in Others) (xapp dependency)
 ```
 
-### Kazam Installation
+## Kazam Installation
 
 https://launchpad.net/~sylvain-pineau/+archive/ubuntu/kazam
 
@@ -70,7 +70,7 @@ To work, install the following SlackBuilds:
 - python-distutils-extra.SlackBuild
 ```
 
-### ProtonVPN Installation
+## ProtonVPN Installation
 
 https://protonvpn.com/
 
@@ -89,7 +89,7 @@ For gui:
 - python3-ConfigParser.SlackBuild
 ```
 
-### Transmageddon Installation
+## Transmageddon Installation
 
 http://www.linuxrising.org/
 
@@ -119,12 +119,12 @@ To work, install the following SlackBuilds:
 ```
 - transmageddon.SlackBuild
 
-- gst-plugins-ugly.SlackBuild (in SlackBuilds)
-- gst-plugins-bad.SlackBuild (in SlackBuilds)
-- lsdvd.SlackBuild (in SlackBuilds)
+- gst-plugins-ugly.SlackBuild (in Others)
+- gst-plugins-bad.SlackBuild  (in Others)
+- lsdvd.SlackBuild            (in Others)
 ```
 
-### youtube-dl Installation
+## youtube-dl Installation
 
 https://youtube-dl.org/
 

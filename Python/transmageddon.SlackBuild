@@ -1,4 +1,5 @@
 #!/bin/sh
+# Software
 
 # Slackware build script for transmageddon
 
@@ -6,7 +7,10 @@
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
-[ ! "$(ls /var/log/packages/lsdvd* 2>&-)" ] && { echo -e "\nDependência Faltante: lsdvd !\n"; exit 1; }
+[ ! "$(ls /var/log/packages/gst-plugins-bad* 2>&-)" ] && { echo -e "\nDependência Faltante: gst-plugins-bad !\n"; ERRO=1; }
+[ ! "$(ls /var/log/packages/gst-plugins-ugly* 2>&-)" ] && { echo -e "\nDependência Faltante: gst-plugins-ugly !\n"; ERRO=1; }
+[ ! "$(ls /var/log/packages/lsdvd* 2>&-)" ] && { echo -e "\nDependência Faltante: lsdvd !\n"; ERRO=1; }
+[ "$ERRO" = 1 ] && exit 1
 
 PRGNAM=transmageddon
 VERSION=1.5
