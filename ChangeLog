@@ -3,6 +3,50 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2021-09-16 #############################################
+
+### Added / Adicionado
+ - Electron:
+	- Correo.SlackBuild
+ - Softwares:
+	- Create Directory for Softwares.
+	- CPU-X.SlackBuild
+	- libcpuid.SlackBuild
+- Others:
+	- Create Directory for Others Softwares.
+	- w3m.SlackBuild
+	- yad.SlackBuild
+ - Specific:
+	- libsystemd0.SlackBuild
+ - Extra:
+	- MX-Conky:
+		- fix_check_messages.patch
+###
+
+### Upgraded / Atualizado
+ - Electron:
+	- vscodium.SlackBuild
+ - Specific:
+	- vim.SlackBuild
+###
+
+### Changed / Modificado
+ - Specific:
+	- Rename Rebuild folder for Specific.
+###
+
+### Fixed / Corrigido
+ - Softwares:
+	- flareget.SlackBuild
+	- p7zip.SlackBuild
+	- rar.SlackBuild
+ - Others:
+	- ccat.SlackBuild
+###
+
+##########################################################################
+
+
 ## [ Released ] - 2021-09-08 #############################################
 
 ### Added / Adicionado
@@ -755,35 +799,3 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 - Extra:
 	- checklink
 ###
-
-### Fixed / Corrigido
- - script:
-	- aria2.build
-		- Changes to instructions after generating the package.
-		- Script improvements Post-installation.
-	- c-ares.build
-		- Changes to instructions after generating the package.
-		- Script improvements Post-installation.
-	- frostwire.build
-		- Changes to instructions after generating the package.
-		- Script improvements Post-installation.
-	- googlechrome.build
-		- Changes to instructions after generating the package.
-		- Script improvements Post-installation.
-	- jdk15.build
-		- Changes to instructions after generating the package.
-		- Script improvements Post-installation.
-	- smoffice2021.build
-		- Changes to instructions after generating the package.
-	- telegram.build
-		- Changes to instructions after generating the package.
-		- Script improvements Post-installation.
-	- uget.build
-		- Changes to instructions after generating the package.
-		- Script improvements Post-installation.
-	- whatsapp.build
-		- Changes to instructions after generating the package.
-		- Script improvements Post-installation.
-###
-
-##########################################################################
