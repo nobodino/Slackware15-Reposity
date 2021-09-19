@@ -3,6 +3,32 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2021-09-19 #############################################
+
+### Added / Adicionado
+ - Softwares:
+	- conky-manager.SlackBuild
+	- conky.SlackBuild
+	- imlib2.SlackBuild
+	- mx-conky.SlackBuild
+	- tolua++.SlackBuild
+###
+
+### Upgraded / Atualizado
+ - Softwares:
+	- libass.SlackBuild
+	- libsidplayfp.SlackBuild
+	- telegram.SlackBuild
+###
+
+### Changed / Modificado
+ - Softwares:
+	- acetoneiso.SlackBuild
+###
+
+##########################################################################
+
+
 ## [ Released ] - 2021-09-16 #############################################
 
 ### Added / Adicionado

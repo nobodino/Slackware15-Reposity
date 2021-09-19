@@ -1,16 +1,15 @@
 #!/bin/sh
 # Dependencies
 
-# Slackware build script for libsidplayfp
+# Slackware build script for imlib2
 
 # Copyright 2021 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
-[ ! "$(ls /var/log/packages/xa* 2>&-)" ] && { echo -e "\nDependência Faltante: xa !\n"; exit 1; }
 
-PRGNAM=libsidplayfp
-VERSION=2.3.0
+PRGNAM=imlib2
+VERSION=1.7.1
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
@@ -25,7 +24,7 @@ WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK=https://ufpr.dl.sourceforge.net/project/sidplay-residfp/libsidplayfp/2.3/libsidplayfp-2.3.0.tar.gz
+LINK=https://sourceforge.net/projects/enlightenment/files/imlib2-src/1.7.1/imlib2-1.7.1.tar.bz2
 
 if [ "$ARCH" = "i586" ]; then
 	SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -53,6 +52,10 @@ cd $PRGNAM-$VERSION
 chown -R root:root .
 chmod -R u+w,go+r-w,a+X-s .
 
+if ! grep -q "my_libs" configure.ac 2>/dev/null; then
+	sed -i 's|@my_libs@||' $PRGNAM-config.in
+fi
+
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 ./configure \
@@ -60,26 +63,27 @@ CXXFLAGS="$SLKCFLAGS" \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
-  --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
-  --enable-static=no \
+  --disable-static \
   --build=$ARCH-slackware-linux
 make; make install-strip DESTDIR=$PKG
-rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
-cp -a AUTHORS COPYING NEWS README* TODO $PKG/usr/doc/$PRGNAM-$VERSION
 
-echo "            |-----handy-ruler------------------------------------------------------|
-libsidplayfp: libsidplayfp (SID emulation)
-libsidplayfp:
-libsidplayfp: Libsidplayfp (and its console frontend sidplayfp) is a fork of
-libsidplayfp: sidplay2 born with the aim to improve the quality of emulating the
-libsidplayfp: 6581, 8580 chips and the surrounding C64 system in order to play
-libsidplayfp: SID music better.
-libsidplayfp:
-libsidplayfp: Homepage: https://sourceforge.net/projects/sidplay-residfp/
-libsidplayfp:
-libsidplayfp:
-libsidplayfp:" > $PKG/install/slack-desc
+rm -rf $PKG/usr/lib${LIBDIRSUFFIX}/*.la
+rm -rf $PKG/usr/lib${LIBDIRSUFFIX}/*/*/*.la
+cp -a AUTHORS COPYING* ChangeLog INSTALL README TODO $PKG/usr/doc/$PRGNAM-$VERSION
+
+echo "      |-----handy-ruler------------------------------------------------------|
+imlib2: imlib2 (successor to Imlib)
+imlib2:
+imlib2: Imlib2 can load image files from disk in one of many formats, save
+imlib2: images to disk in one of many formats, render image data onto other
+imlib2: images, render images to an X-Windows drawable, produce pixmaps and
+imlib2: pixmap masks of images, apply filters to images, rotate images,
+imlib2: accept RGBA data for images, scale images, and more.
+imlib2:
+imlib2:
+imlib2:
+imlib2:" > $PKG/install/slack-desc
 
 cd $PKG; /sbin/makepkg -l y -c n $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
 chown -R 1000:users $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz

@@ -13,6 +13,7 @@ Feel at ease to install the packages you need.
 |----------------------------|------------------|-------------------------|-------------------------|
 | `acetoneiso`               | `2.4`            | `i586` `x86_64` `arm`   |                         |
 | `codeblocks`               | `20.03`          | `i586` `x86_64` `arm`   |                         |
+| `conky-manager`            | `2.7`            | `i586` `x86_64` `arm`   |                         |
 | `CPU-X`                    | `4.2.0`          | `i586` `x86_64` `arm`   |                         |
 | `eclipse-jee`              | `4.18`           | `x86_64`                |                         |
 | `flareget`                 | `5.0.0`          | `i586` `x86_64`         |                         |
@@ -20,6 +21,7 @@ Feel at ease to install the packages you need.
 | `google-chrome`            | `93.0.4577.63`   | `x86_64`                |                         |
 | `google-earth`             | `7.3.3.7786`     | `x86_64`                |                         |
 | `mpv`                      | `0.33.1`         | `i586` `x86_64` `arm`   | `hypnotix`              |
+| `mx-conky`                 | `21.7`           | `i586` `x86_64` `arm`   |                         |
 | `nulloy`                   | `0.8.2_112`      | `i586` `x86_64` `arm`   |                         |
 | `ocenaudio`                | `3.10.12`        | `i586` `x86_64`         |                         |
 | `p7zip`                    | `17.04`          | `i586` `x86_64` `arm`   | `acetoneiso`            |
@@ -27,7 +29,7 @@ Feel at ease to install the packages you need.
 | `qbittorrent`              | `4.3.7`          | `i586` `x86_64` `arm`   |                         |
 | `QMPlay2`                  | `21.06.07`       | `i586` `x86_64` `arm`   |                         |
 | `spotify`                  | `1.1.67.586`     | `x86_64`                |                         |
-| `telegram`                 | `2.8.8`          | `x86_64`                |                         |
+| `telegram`                 | `3.0.1`          | `x86_64`                |                         |
 | `uget`                     | `2.2.3`          | `i586` `x86_64` `arm`   |                         |
 | `umplayer`                 | `0.98.2`         | `x86_64`                |                         |
 | `........................` | `..............` | `.....................` | `.....................` |
@@ -36,21 +38,24 @@ Feel at ease to install the packages you need.
 |----------------------------|------------------|-------------------------|-------------------------|
 | `aria2`                    | `1.36.0`         | `i586` `x86_64` `arm`   | `uget`                  |
 | `cdrkit`                   | `1.1.11`         | `i586` `x86_64` `arm`   | `acetoneiso`            |
+| `conky`                    | `1.10.8`         | `i586` `x86_64` `arm`   | `conky-manager`         |
 | `fuseiso`                  | `20070708`       | `i586` `x86_64` `arm`   | `acetoneiso`            |
 | `graphicsmagick`           | `1.3.36`         | `i586` `x86_64` `arm`   | `photoqt`               |
+| `imlib2`                   | `1.7.1`          | `i586` `x86_64` `arm`   | `conky`                 |
 | `jack`                     | `1.9.19`         | `i586` `x86_64` `arm`   | `ocenaudio` `portaudio` |
-| `libass`                   | `0.15.1`         | `i586` `x86_64` `arm`   | `mpv` `QMPlay2`         |
+| `libass`                   | `0.15.2`         | `i586` `x86_64` `arm`   | `mpv` `QMPlay2`         |
 | `libcpuid`                 | `0.5.1`          | `i586` `x86_64` `arm`   | `CPU-X`                 |
 | `libgme`                   | `0.6.3`          | `i586` `x86_64` `arm`   | `QMPlay2`               |
 | `libplacebo`               | `3.120.3`        | `i586` `x86_64` `arm`   | `mpv`                   |
 | `libqpsd`                  | `2.2.1`          | `i586` `x86_64` `arm`   | `photoqt`               |
-| `libsidplayfp`             | `2.2.2`          | `i586` `x86_64` `arm`   | `QMPlay2`               |
+| `libsidplayfp`             | `2.3.0`          | `i586` `x86_64` `arm`   | `QMPlay2`               |
 | `libtorrent-rasterbar`     | `2.0.4`          | `i586` `x86_64` `arm`   | `qbittorrent`           |
-| `lua`                      | `5.1.5`          | `i586` `x86_64` `arm`   | `mpv`                   |
+| `lua`                      | `5.1.5`          | `i586` `x86_64` `arm`   | `mpv` `tolua++`         |
 | `mujs`                     | `1.1.3`          | `i586` `x86_64` `arm`   | `mpv`                   |
 | `portaudio`                | `19.7.0`         | `i586` `x86_64` `arm`   | `QMPlay2` `espeak`      |
 | `pugixml`                  | `1.11.4`         | `i586` `x86_64` `arm`   | `photoqt`               |
-| `rar`                      | `6.0.2`          | `x86_64`                |                         |
+| `rar`                      | `6.0.2`          | `x86_64`                | `acetoneiso`            |
+| `tolua++`                  | `1.0.93`         | `i586` `x86_64` `arm`   | `conky`                 |
 | `wxGTK3`                   | `3.0.5.1`        | `i586` `x86_64` `arm`   | `codeblocks` `p7zip`    |
 | `xa`                       | `2.3.11`         | `i586` `x86_64` `arm`   | `libsidplayfp`          |
 | `........................` | `..............` | `.....................` | `.....................` |
@@ -92,7 +97,7 @@ Feel at ease to install the packages you need.
 |----------------------------|------------------|-------------------------|-------------------------|
 | `clion`                    | `2021.2.1`       | `noarch`                |                         |
 | `frostwire`                | `6.9.5`          | `x86_64`                |                         |
-| `jdk16`                    | `16.0.2`         | `x86_64`                |                         |
+| `jdk16`                    | `16.0.2`         | `x86_64`                | `frostwire` `JDownloader2`    |
 | `JDownloader2`             | `2.0`            | `noarch`                |                         |
 | `........................` | `..............` | `.....................` | `.....................` |
 
@@ -186,3 +191,4 @@ Autor: Mauricio Ferrari
 E-Mail: *m10ferrari1200@gmail.com*
 
 Telegram: *@maurixnovatrento*
+

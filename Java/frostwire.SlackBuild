@@ -2,6 +2,7 @@
 # Software
 
 # Slackware build script for frostwire
+# Require: jdk16 !
 
 # Copyright 2021 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.

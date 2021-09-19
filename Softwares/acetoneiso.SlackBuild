@@ -7,10 +7,10 @@
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
-[ ! "$(ls /var/log/packages/cdrkit*  2>&-)" ] && { echo -e "\nDependência Faltante: cdrkit !  \n"; ERRO=1; }
-[ ! "$(ls /var/log/packages/fuseiso* 2>&-)" ] && { echo -e "\nDependência Faltante: fuseiso ! \n"; ERRO=1; }
-[ ! "$(ls /var/log/packages/p7zip*   2>&-)" ] && { echo -e "\nDependência Faltante: p7zip !   \n"; ERRO=1; }
-[ ! "$(ls /var/log/packages/rar*     2>&-)" ] && { echo -e "\nDependência Faltante: rarlinux !\n"; ERRO=1; }
+[ ! "$(ls /var/log/packages/cdrkit*  2>&-)" ] && { echo -e "\nDependência Faltante: cdrkit !     \n"; ERRO=1; }
+[ ! "$(ls /var/log/packages/fuseiso* 2>&-)" ] && { echo -e "\nDependência Faltante: fuseiso !    \n"; ERRO=1; }
+[ ! "$(ls /var/log/packages/p7zip*   2>&-)" ] && { echo -e "\nDependência Faltante: p7zip !      \n"; ERRO=1; }
+[ ! "$(ls /var/log/packages/rar*     2>&-)" ] && { echo -e "\nDependência Faltante: rar (unrar) !\n"; ERRO=1; }
 [ "$ERRO" = 1 ] && exit 1
 
 PRGNAM=acetoneiso

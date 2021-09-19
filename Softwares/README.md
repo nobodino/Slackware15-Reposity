@@ -47,6 +47,25 @@ To work, install the following SlackBuilds:
 - wxGTK3.SlackBuild
 ```
 
+## Conky Complete Installation
+
+https://github.com/zcot/conky-manager2<br/>
+https://github.com/MX-Linux/mx-conky<br/>
+https://github.com/MX-Linux/mx-conky-data
+
+Conky is a free, light-weight system monitor for X, that displays any kind of information on your desktop.<br/>
+To work, install the following SlackBuilds:
+```
+For Conky:
+- conky.SlackBuild
+- imlib2.SlackBuild
+- tolua++.SlackBuild
+
+For interfaces:
+- conky-manager.SlackBuild
+- mx-conky.SlackBuild
+```
+
 ## Eclipse JEE Installation
 
 https://www.eclipse.org/
