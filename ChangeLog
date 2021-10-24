@@ -3,6 +3,47 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2021-10-24 #############################################
+
+### Added / Adicionado
+ - Python:
+	- l-nvidia.SlackBuild
+	- swapfile.SlackBuild
+ - Java:
+	- pycharm.SlackBuild
+###
+
+### Upgraded / Atualizado
+ - Electron:
+	- iptvnator.SlackBuild
+	- vscodium.SlackBuild
+ - Java:
+	- jdk16.SlackBuild --> jdk17.SlackBuild
+ - Python:
+	- python3-Jinja2.SlackBuild
+ - Softwares:
+	- freeoffice2018.SlackBuild --> freeoffice2021.SlackBuild
+	- ocenaudio.SlackBuild
+	- photoqt.SlackBuild
+	- spotify.SlackBuild
+	- telegram.SlackBuild
+ - Specific:
+	- libsystemd0.SlackBuild
+###
+
+### Changed / Modificado
+ - Extra:
+	- Transmageddon_1.5_FIX - Modify patch for transmageddon.
+###
+
+### Fixed / Corrigido
+ - Python:
+	- transmageddon.SlackBuild
+###
+
+##########################################################################
+
+
 ## [ Released ] - 2021-09-19 #############################################
 
 ### Added / Adicionado
@@ -555,12 +596,12 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 	- refine.SlackBuild
 	- telegram.SlackBuild
  - Extra:
-	- Cowsay 3.03 FIX        >-->> Cowsay_3.04_FIX
-	- FrostWire 6.8.10 FIX   >-->> Frostwire_6.9.2_FIX
-	- Kazam 1.4.5 FIX        >-->> Kazam_1.4.5_FIX
-	- python3-imdbpy 6.8 FIX >-->> python3-imdbpy_6.8_FIX
-	- Transmageddon 1.5 FIX  >-->> Transmageddon_1.5_FIX
-	- UGet 2.2.3_1 FIX       >-->> UGet_2.2.3-1_FIX
+	- Cowsay 3.03 FIX        --> Cowsay_3.04_FIX
+	- FrostWire 6.8.10 FIX   --> Frostwire_6.9.2_FIX
+	- Kazam 1.4.5 FIX        --> Kazam_1.4.5_FIX
+	- python3-imdbpy 6.8 FIX --> python3-imdbpy_6.8_FIX
+	- Transmageddon 1.5 FIX  --> Transmageddon_1.5_FIX
+	- UGet 2.2.3_1 FIX       --> UGet_2.2.3-1_FIX
 ###
 
 ### Changed / Modificado
@@ -678,8 +719,8 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 ### Changed / Modificado
  - script:
-	- googlechrome.build >-->> google-chrome.build
-	- whatsapp.build >-->> whatsapp-desktop.build
+	- googlechrome.build --> google-chrome.build
+	- whatsapp.build     --> whatsapp-desktop.build
 ###
 
 ### Removed / Removido
@@ -738,7 +779,7 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
  - script:
 	- nulloy.build
  - Packages:
-	- nulloy-0.8.2_92-x86_64-1.txz >-->> nulloy-0.8.2_106-x86_64-1.txz
+	- nulloy-0.8.2_92-x86_64-1.txz --> nulloy-0.8.2_106-x86_64-1.txz
 ###
 
 ### Fixed / Corrigido

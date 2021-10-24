@@ -24,12 +24,15 @@ CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
 LINK1=http://www.linuxrising.org/files/transmageddon-1.5.tar.xz
-LINK2=https://raw.githubusercontent.com/MauricioFerrari-NovaTrento/Slackware15-Reposity/master/Extra/Transmageddon_1.5_FIX/0001-Fix-AppStream-metadata-validation.patch
-LINK3=https://raw.githubusercontent.com/MauricioFerrari-NovaTrento/Slackware15-Reposity/master/Extra/Transmageddon_1.5_FIX/Fix-Bug-getchildren-Python39.patch
-LINK4=https://raw.githubusercontent.com/MauricioFerrari-NovaTrento/Slackware15-Reposity/master/Extra/Transmageddon_1.5_FIX/transmageddon-gtk3.patch
+LINK2=https://raw.githubusercontent.com/mxnt10/Slackware15-Reposity/master/Extra/Transmageddon_1.5_FIX/0001-Fix-AppStream-metadata-validation.patch
+LINK3=https://raw.githubusercontent.com/mxnt10/Slackware15-Reposity/master/Extra/Transmageddon_1.5_FIX/0001-Remove-the-usage-of-deprecated-xml.etree.ElementTree.patch
+LINK4=https://raw.githubusercontent.com/mxnt10/Slackware15-Reposity/master/Extra/Transmageddon_1.5_FIX/0001-Specify-required-versions-of-GI-components.patch
+LINK5=https://raw.githubusercontent.com/mxnt10/Slackware15-Reposity/master/Extra/Transmageddon_1.5_FIX/0002-Fix_about.patch
+LINK6=https://raw.githubusercontent.com/mxnt10/Slackware15-Reposity/master/Extra/Transmageddon_1.5_FIX/0002-Fix_about_in.patch
 
 set -e
-wget -c $LINK1 $LINK2 $LINK3 $LINK4
+wget -O $PRGNAM-$VERSION.tar.gz -c $LINK1
+wget -c $LINK2 $LINK3 $LINK4 $LINK5 $LINK6
 rm -rf $PKG $TMP/$PRGNAM-$VERSION
 mkdir -p $PKG/{install,usr/doc/$PRGNAM-$VERSION}
 cd $TMP; tar xvf $CWD/$PRGNAM-$VERSION.tar.?z*
@@ -38,8 +41,10 @@ chown -R root:root .
 chmod -R u+w,go+r-w,a+X-s .
 
 patch -Np1 -i $CWD/0001-Fix-AppStream-metadata-validation.patch
-patch -Np1 -i $CWD/Fix-Bug-getchildren-Python39.patch
-patch -Np1 -i $CWD/transmageddon-gtk3.patch
+patch -Np1 -i $CWD/0001-Remove-the-usage-of-deprecated-xml.etree.ElementTree.patch
+patch -Np1 -i $CWD/0001-Specify-required-versions-of-GI-components.patch
+patch -Np1 -i $CWD/0002-Fix_about.patch
+patch -Np1 -i $CWD/0002-Fix_about_in.patch
 
 ./configure \
   --prefix=/usr \

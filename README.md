@@ -17,19 +17,19 @@ Feel at ease to install the packages you need.
 | `CPU-X`                    | `4.2.0`          | `i586` `x86_64` `arm`   |                         |
 | `eclipse-jee`              | `4.18`           | `x86_64`                |                         |
 | `flareget`                 | `5.0.0`          | `i586` `x86_64`         |                         |
-| `freeoffice2018`           | `982`            | `x86_64`                |                         |
+| `freeoffice2021`           | `1036`           | `x86_64`                |                         |
 | `google-chrome`            | `93.0.4577.63`   | `x86_64`                |                         |
 | `google-earth`             | `7.3.3.7786`     | `x86_64`                |                         |
 | `mpv`                      | `0.33.1`         | `i586` `x86_64` `arm`   | `hypnotix`              |
 | `mx-conky`                 | `21.7`           | `i586` `x86_64` `arm`   |                         |
 | `nulloy`                   | `0.8.2_112`      | `i586` `x86_64` `arm`   |                         |
-| `ocenaudio`                | `3.10.12`        | `i586` `x86_64`         |                         |
+| `ocenaudio`                | `3.10.13`        | `i586` `x86_64`         |                         |
 | `p7zip`                    | `17.04`          | `i586` `x86_64` `arm`   | `acetoneiso`            |
-| `photoqt`                  | `2.3`            | `i586` `x86_64` `arm`   |                         |
+| `photoqt`                  | `2.4`            | `i586` `x86_64` `arm`   |                         |
 | `qbittorrent`              | `4.3.7`          | `i586` `x86_64` `arm`   |                         |
 | `QMPlay2`                  | `21.06.07`       | `i586` `x86_64` `arm`   |                         |
-| `spotify`                  | `1.1.67.586`     | `x86_64`                |                         |
-| `telegram`                 | `3.0.1`          | `x86_64`                |                         |
+| `spotify`                  | `1.1.68.632`     | `x86_64`                |                         |
+| `telegram`                 | `3.1.8`          | `x86_64`                |                         |
 | `uget`                     | `2.2.3`          | `i586` `x86_64` `arm`   |                         |
 | `umplayer`                 | `0.98.2`         | `x86_64`                |                         |
 | `........................` | `..............` | `.....................` | `.....................` |
@@ -67,10 +67,10 @@ Feel at ease to install the packages you need.
 | `Correo`                   | `1.0.6`          | `x86_64`                |                         |
 | `discord`                  | `0.0.15`         | `x86_64`                |                         |
 | `facebook-desktop`         | `1.1`            | `x86_64`                |                         |
-| `iptvnator`                | `0.8.0`          | `x86_64`                |                         |
+| `iptvnator`                | `0.9.0`          | `x86_64`                |                         |
 | `notable`                  | `1.8.4`          | `x86_64`                |                         |
 | `pluto-tv`                 | `1.1`            | `x86_64`                |                         |
-| `vscodium`                 | `1.60.1`         | `x86_64`                |                         |
+| `vscodium`                 | `1.61.2`         | `x86_64`                |                         |
 | `whatsapp-desktop`         | `0.6.1`          | `x86_64`                |                         |
 | `........................` | `..............` | `.....................` | `.....................` |
 
@@ -97,8 +97,9 @@ Feel at ease to install the packages you need.
 |----------------------------|------------------|-------------------------|-------------------------|
 | `clion`                    | `2021.2.1`       | `noarch`                |                         |
 | `frostwire`                | `6.9.5`          | `x86_64`                |                         |
-| `jdk16`                    | `16.0.2`         | `x86_64`                | `frostwire` `JDownloader2`    |
+| `jdk17`                    | `17.0.1`         | `x86_64`                |                         |
 | `JDownloader2`             | `2.0`            | `noarch`                |                         |
+| `pycharm`                  | `2021.2.3`       | `noarch`                |                         |
 | `........................` | `..............` | `.....................` | `.....................` |
 
 <br>
@@ -107,8 +108,10 @@ Feel at ease to install the packages you need.
 |----------------------------|------------------|-------------------------|-------------------------|
 | `hypnotix`                 | `2.0`            | `noarch`                |                         |
 | `kazam`                    | `1.5.4`          | `noarch`                |                         |
+| `l-nvidia`                 | `1.5`            | `noarch`                |                         |
 | `protonvpn-cli`            | `2.2.11`         | `i586` `x86_64` `arm`   | `protonvpn-gui`         |
 | `protonvpn-gui`            | `2.1.1`          | `i586` `x86_64` `arm`   |                         |
+| `swapfile`                 | `1.0`            | `noarch`                |                         |
 | `transmageddon`            | `1.5`            | `noarch`                |                         |
 | `youtube-dl`               | `2021.06.06`     | `i586` `x86_64` `arm`   | `hypnotix`              |
 | `........................` | `..............` | `.....................` | `.....................` |
@@ -119,7 +122,7 @@ Feel at ease to install the packages you need.
 | `python3-distutils-extra`  | `2.39`           | `i586` `x86_64` `arm`   | `kazam`                 |
 | `python3-docopt`           | `0.6.2`          | `i586` `x86_64` `arm`   | `protonvpn-cli`         |
 | `python3-imdbpy`           | `2021.4.18`      | `i586` `x86_64` `arm`   | `hypnotix`              |
-| `python3-Jinja2`           | `3.0.1`          | `i586` `x86_64` `arm`   | `protonvpn-cli`         |
+| `python3-Jinja2`           | `3.0.2`          | `i586` `x86_64` `arm`   | `protonvpn-cli`         |
 | `python3-MarkupSafe`       | `2.0.1`          | `i586` `x86_64` `arm`   | `python3-Jinja2`        |
 | `python3-pythondialog`     | `3.5.2`          | `i586` `x86_64` `arm`   | `protonvpn-cli`         |
 | `python3-setproctitle`     | `1.2.2`          | `i586` `x86_64` `arm`   | `hypnotix`              |
@@ -165,7 +168,7 @@ Feel at ease to install the packages you need.
 |----------------------------|------------------|-------------------------|-------------------------|
 | `fortune-mod-br`           | `20160820`       | `noarch`                |                         |
 | `fortune-mod`              | `2.12.0`         | `i586` `x86_64` `arm`   | `fortune-mod-br`        |
-| `libsystemd0`              | `249.4`          | `x86_64`                |                         |
+| `libsystemd0`              | `249.5`          | `x86_64`                |                         |
 | `recode`                   | `3.7.9`          | `i586` `x86_64` `arm`   | `fortune-mod`           |
 | `vim`                      | `8.2.3444`       | `i586` `x86_64` `arm`   |                         |
 | `........................` | `..............` | `.....................` | `.....................` |
