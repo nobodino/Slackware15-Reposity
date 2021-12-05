@@ -3,6 +3,35 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2021-12-04 #############################################
+
+### Added / Adicionado
+ - Python:
+	- python3-Unidecode.SlackBuild
+###
+
+### Upgraded / Atualizado
+ - Electron:
+	- discord.SlackBuild
+	- vscodium.SlackBuild
+ - Java:
+	- clion.SlackBuild
+	- pycharm.SlackBuild
+ - Python:
+	- hypnotix.SlackBuild
+	- python3-ConfigParser.SlackBuild
+	- python3-Jinja2.SlackBuild
+	- python3-pythondialog.SlackBuild
+	- swapfile.SlackBuild
+ - Softwares:
+	- ocenaudio.SlackBuild
+	- spotify.SlackBuild
+	- xa.SlackBuild
+###
+
+##########################################################################
+
+
 ## [ Released ] - 2021-10-24 #############################################
 
 ### Added / Adicionado

@@ -36,6 +36,7 @@ To work, install the following SlackBuilds:
 - hypnotix.SlackBuild
 - python3-imdbpy.SlackBuild
 - python3-setproctitle.SlackBuild
+- python3-Unidecode.SlackBuild
 - youtube-dl.SlackBuild
 
 - xapp.SlackBuild        (in Others)
@@ -89,10 +90,19 @@ For gui:
 - python3-ConfigParser.SlackBuild
 ```
 
+## SwapFile Installation
+
+https://github.com/mxnt10/swapfile
+
+Application for easy configuration of swap file and swappiness priority in slackware and others linux distributions.<br/>
+To work, install the following SlackBuilds:
+```
+- swapfile.SlackBuild
+```
+
 ## Transmageddon Installation
 
 http://www.linuxrising.org/
-
 
 Transmageddon is a video transcoder for Linux and Unix systems built using GStreamer.<br/>
 It supports almost any format as its input and can generate a very large host of output files.<br/>

@@ -18,17 +18,17 @@ Feel at ease to install the packages you need.
 | `eclipse-jee`              | `4.18`           | `x86_64`                |                         |
 | `flareget`                 | `5.0.0`          | `i586` `x86_64`         |                         |
 | `freeoffice2021`           | `1036`           | `x86_64`                |                         |
-| `google-chrome`            | `93.0.4577.63`   | `x86_64`                |                         |
+| `google-chrome`            | `96.0.4664.45`   | `x86_64`                |                         |
 | `google-earth`             | `7.3.3.7786`     | `x86_64`                |                         |
-| `mpv`                      | `0.33.1`         | `i586` `x86_64` `arm`   | `hypnotix`              |
+| `mpv`                      | `0.34.0`         | `i586` `x86_64` `arm`   | `hypnotix`              |
 | `mx-conky`                 | `21.7`           | `i586` `x86_64` `arm`   |                         |
 | `nulloy`                   | `0.8.2_112`      | `i586` `x86_64` `arm`   |                         |
-| `ocenaudio`                | `3.10.13`        | `i586` `x86_64`         |                         |
+| `ocenaudio`                | `3.11`           | `i586` `x86_64`         |                         |
 | `p7zip`                    | `17.04`          | `i586` `x86_64` `arm`   | `acetoneiso`            |
 | `photoqt`                  | `2.4`            | `i586` `x86_64` `arm`   |                         |
 | `qbittorrent`              | `4.3.7`          | `i586` `x86_64` `arm`   |                         |
 | `QMPlay2`                  | `21.06.07`       | `i586` `x86_64` `arm`   |                         |
-| `spotify`                  | `1.1.68.632`     | `x86_64`                |                         |
+| `spotify`                  | `1.1.72.439`     | `x86_64`                |                         |
 | `telegram`                 | `3.1.8`          | `x86_64`                |                         |
 | `uget`                     | `2.2.3`          | `i586` `x86_64` `arm`   |                         |
 | `umplayer`                 | `0.98.2`         | `x86_64`                |                         |
@@ -57,7 +57,7 @@ Feel at ease to install the packages you need.
 | `rar`                      | `6.0.2`          | `x86_64`                | `acetoneiso`            |
 | `tolua++`                  | `1.0.93`         | `i586` `x86_64` `arm`   | `conky`                 |
 | `wxGTK3`                   | `3.0.5.1`        | `i586` `x86_64` `arm`   | `codeblocks` `p7zip`    |
-| `xa`                       | `2.3.11`         | `i586` `x86_64` `arm`   | `libsidplayfp`          |
+| `xa`                       | `2.3.12`         | `i586` `x86_64` `arm`   | `libsidplayfp`          |
 | `........................` | `..............` | `.....................` | `.....................` |
 
 <br>
@@ -65,12 +65,12 @@ Feel at ease to install the packages you need.
 | `Electron Packages`        | `Version`        | `Architecture`          | `Required By`           |
 |----------------------------|------------------|-------------------------|-------------------------|
 | `Correo`                   | `1.0.6`          | `x86_64`                |                         |
-| `discord`                  | `0.0.15`         | `x86_64`                |                         |
+| `discord`                  | `0.0.16`         | `x86_64`                |                         |
 | `facebook-desktop`         | `1.1`            | `x86_64`                |                         |
 | `iptvnator`                | `0.9.0`          | `x86_64`                |                         |
 | `notable`                  | `1.8.4`          | `x86_64`                |                         |
 | `pluto-tv`                 | `1.1`            | `x86_64`                |                         |
-| `vscodium`                 | `1.61.2`         | `x86_64`                |                         |
+| `vscodium`                 | `1.62.3`         | `x86_64`                |                         |
 | `whatsapp-desktop`         | `0.6.1`          | `x86_64`                |                         |
 | `........................` | `..............` | `.....................` | `.....................` |
 
@@ -95,37 +95,38 @@ Feel at ease to install the packages you need.
 
 | `Java Packages`            | `Version`        | `Architecture`          | `Required By`           |
 |----------------------------|------------------|-------------------------|-------------------------|
-| `clion`                    | `2021.2.1`       | `noarch`                |                         |
+| `clion`                    | `2021.3`         | `noarch`                |                         |
 | `frostwire`                | `6.9.5`          | `x86_64`                |                         |
 | `jdk17`                    | `17.0.1`         | `x86_64`                |                         |
 | `JDownloader2`             | `2.0`            | `noarch`                |                         |
-| `pycharm`                  | `2021.2.3`       | `noarch`                |                         |
+| `pycharm`                  | `2021.3`         | `noarch`                |                         |
 | `........................` | `..............` | `.....................` | `.....................` |
 
 <br>
 
 | `Python Packages`          | `Version`        | `Architecture`          | `Required By`           |
 |----------------------------|------------------|-------------------------|-------------------------|
-| `hypnotix`                 | `2.0`            | `noarch`                |                         |
+| `hypnotix`                 | `2.1`            | `noarch`                |                         |
 | `kazam`                    | `1.5.4`          | `noarch`                |                         |
 | `l-nvidia`                 | `1.5`            | `noarch`                |                         |
 | `protonvpn-cli`            | `2.2.11`         | `i586` `x86_64` `arm`   | `protonvpn-gui`         |
 | `protonvpn-gui`            | `2.1.1`          | `i586` `x86_64` `arm`   |                         |
-| `swapfile`                 | `1.0`            | `noarch`                |                         |
+| `swapfile`                 | `1.1`            | `noarch`                |                         |
 | `transmageddon`            | `1.5`            | `noarch`                |                         |
 | `youtube-dl`               | `2021.06.06`     | `i586` `x86_64` `arm`   | `hypnotix`              |
 | `........................` | `..............` | `.....................` | `.....................` |
 
 | `Dependencies Packages`    | `Version`        | `Architecture`          | `Required By`           |
 |----------------------------|------------------|-------------------------|-------------------------|
-| `python3-ConfigParser`     | `5.0.2`          | `i586` `x86_64` `arm`   | `protonvpn-gui`         |
+| `python3-ConfigParser`     | `5.2.0`          | `i586` `x86_64` `arm`   | `protonvpn-gui`         |
 | `python3-distutils-extra`  | `2.39`           | `i586` `x86_64` `arm`   | `kazam`                 |
 | `python3-docopt`           | `0.6.2`          | `i586` `x86_64` `arm`   | `protonvpn-cli`         |
 | `python3-imdbpy`           | `2021.4.18`      | `i586` `x86_64` `arm`   | `hypnotix`              |
-| `python3-Jinja2`           | `3.0.2`          | `i586` `x86_64` `arm`   | `protonvpn-cli`         |
+| `python3-Jinja2`           | `3.0.3`          | `i586` `x86_64` `arm`   | `protonvpn-cli`         |
 | `python3-MarkupSafe`       | `2.0.1`          | `i586` `x86_64` `arm`   | `python3-Jinja2`        |
-| `python3-pythondialog`     | `3.5.2`          | `i586` `x86_64` `arm`   | `protonvpn-cli`         |
+| `python3-pythondialog`     | `3.5.3`          | `i586` `x86_64` `arm`   | `protonvpn-cli`         |
 | `python3-setproctitle`     | `1.2.2`          | `i586` `x86_64` `arm`   | `hypnotix`              |
+| `python3-Unidecode`        | `1.3.2`          | `i586` `x86_64` `arm`   | `hypnotix`              |
 | `python3-xlib`             | `0.31`           | `i586` `x86_64` `arm`   | `kazam`                 |
 | `........................` | `..............` | `.....................` | `.....................` |
 

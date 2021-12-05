@@ -10,7 +10,7 @@
 
 PRGNAM=python3-ConfigParser
 SRCNAM=configparser
-VERSION=5.0.2
+VERSION=5.2.0
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
@@ -25,7 +25,7 @@ WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK=https://files.pythonhosted.org/packages/c9/9c/c1ac39b3c72a70e93479cb4b7f1123f693293c5e4c40fdb3e1242f740665/configparser-5.0.2.tar.gz
+LINK=https://files.pythonhosted.org/packages/02/a8/5fae273a45a3e4e34ea560c99a4843fe2d9fc6fb691de064dc9c72c46e57/configparser-5.2.0.tar.gz
 
 set -e
 wget -c $LINK
