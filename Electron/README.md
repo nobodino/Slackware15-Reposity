@@ -25,16 +25,6 @@ Install the following SlackBuild:
 - discord.SlackBuild
 ```
 
-## Facebook Desktop Installation
-
-https://github.com/MauricioFerrari-NovaTrento/Slackware15-Reposity/releases/tag/Release
-
-Unofficial facebook desktop client for Linux.<br/>
-Install the following SlackBuild:
-```
-- facebook-desktop.SlackBuild
-```
-
 ## IPTVnator Installation
 
 https://github.com/4gray/iptvnator
@@ -75,14 +65,4 @@ VSCodium is a community-driven, freely-licensed binary distribution of Microsoft
 Install the following SlackBuild:
 ```
 - vscodium.SlackBuild
-```
-
-## WhatsApp Desktop Installation
-
-http://packages.linuxmint.com/pool/import/w/whatsapp-desktop/
-
-Unofficial whatsapp web desktop client for OSX, Linux and Windows.<br/>
-Install the following SlackBuild:
-```
-- whatsapp-desktop.SlackBuild
 ```

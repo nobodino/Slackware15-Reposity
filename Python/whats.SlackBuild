@@ -1,49 +1,52 @@
 #!/bin/sh
+# Software
 
-# Slackware build script for l-nvidia
+# Slackware build script for whats
 
 # Copyright 2021 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
+[ ! "$(ls /var/log/packages/python3-PyQtWebEngine* 2>&-)" ] && { echo -e "\nDependência Faltante: python3-PyQtWebEngine !\n"; ERRO=1; }
+[ ! "$(ls /var/log/packages/BeautifulSoup4*        2>&-)" ] && { echo -e "\nDependência Faltante: BeautifulSoup4        !\n"; ERRO=1; }
+[ "$ERRO" = 1 ] && exit 1
 
-PRGNAM=l-nvidia
-SRCNAM=launcher-nvidia
-VERSION=1.5
+PRGNAM=whats
+VERSION=2.1
 ARCH=noarch
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
-WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM 
+WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
 
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK=https://github.com/mxnt10/launcher-nvidia/archive/refs/tags/v1.5.tar.gz
+LINK=https://github.com/mxnt10/whats/archive/refs/tags/v2.1.tar.gz
 
 set -e
 wget -c -O $PRGNAM-$VERSION.tar.gz $LINK
-rm -rf $PKG $TMP/$SRCNAM-$VERSION*
+rm -rf $PKG $TMP/$PRGNAM-$VERSION*
 mkdir -p $PKG/install
 cd $TMP; tar xvf $CWD/$PRGNAM-$VERSION.tar.?z*
-cd $SRCNAM-$VERSION*
+cd $PRGNAM-$VERSION*
 chown -R root:root .
 chmod -R u+w,go+r-w,a+X-s .
 
 install_root=$PKG ./install.sh
 
-echo "        |-----handy-ruler------------------------------------------------------|
-l-nvidia: l-nvidia (launcher Nvidia)
-l-nvidia:
-l-nvidia: Nvidia Launcher for Notebooks with hybrid video
-l-nvidia: nvidea + intel for Slackware.
-l-nvidia:
-l-nvidia:
-l-nvidia:
-l-nvidia:
-l-nvidia:
-l-nvidia:
-l-nvidia:" > $PKG/install/slack-desc
+echo "     |-----handy-ruler------------------------------------------------------|
+whats: whats (whatsapp desktop)
+whats:
+whats: Unofficial webapp for WhataApp Web created in python
+whats: using QtWebEngine.
+whats:
+whats: https://github.com/mxnt10/whats
+whats:
+whats:
+whats:
+whats:
+whats:" > $PKG/install/slack-desc
 
 echo "if [ -x /usr/bin/update-desktop-database ]; then
 	/usr/bin/update-desktop-database -q usr/share/applications >/dev/null 2>&1
@@ -67,7 +70,7 @@ fi" > $PKG/install/doinst.sh
 
 cd $PKG; /sbin/makepkg -l y -c n $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
 chown -R 1000:users $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
-rm -rf $PKG $TMP/$SRCNAM-$VERSION*
+rm -rf $PKG $TMP/$PRGNAM-$VERSION*
 
 cd $CWD
 [ ${TIME:-0} != 0 ] && TIME="-t $TIME" || TIME=

@@ -3,6 +3,55 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2022-01-04 #############################################
+
+### Added / Adicionado
+ - Python:
+	- BeautifulSoup4.SlackBuild
+	- face.SlackBuild
+	- python3-lxml.SlackBuild
+	- python3-PyQtWebEngine.SlackBuild
+	- python3-soupsieve.SlackBuild
+	- whats.SlackBuild
+ - Softwares:
+	- xnconvert.SlackBuild
+###
+
+### Upgraded / Atualizado
+ - Electron:
+	- vscodium.SlackBuild
+ - Python:
+	- hypnotix.SlackBuild
+	- youtube-dl.SlackBuild
+ - Softwares:
+	- graphicsmagick.SlackBuild
+	- libsidplayfp.SlackBuild
+	- ocenaudio.SlackBuild
+	- telegram.SlackBuild
+ - Others:
+ 	- dpkg.SlackBuild
+	- yad.SlackBuild
+ - Specific:
+	- 
+###
+
+### Removed / Removido
+ - Electron:
+	- facebook-desktop.SlackBuild
+	- whatsapp-desktop.SlackBuild
+ - Python:
+	- l-nvidia.SlackBuild
+ - Softwares:
+	- eclipse-jee.SlackBuild
+ - Specific:
+	- libsystemd0.SlackBuild
+ - Extra:
+	- WhatsApp_0.6.1_FIX
+###
+
+##########################################################################
+
+
 ## [ Released ] - 2021-12-04 #############################################
 
 ### Added / Adicionado
