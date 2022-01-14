@@ -3,6 +3,20 @@
 
 SlackBuilds Repository specific for python-based programs.
 
+## Face Installation
+
+https://github.com/mxnt10/face
+
+Unofficial WebApp for Facebook website created in Python using PyQtWebEngine.<br/>
+To work, install the following SlackBuilds:
+```
+- python3-lxml.SlackBuild
+- python3-PyQtWebEngine.SlackBuild
+- python3-soupsieve.SlackBuild
+- face.SlackBuild
+```
+
+
 ## Hypnotix Installation
 
 https://github.com/linuxmint/hypnotix
@@ -144,4 +158,17 @@ It should work in your Unix box, in Windows or in Mac OS X.<br/>
 To work, install the following SlackBuilds:
 ```
 - youtube-dl.SlackBuild
+```
+
+## Whats Installation
+
+https://github.com/mxnt10/whats
+
+Unofficial webapp for WhatsApp Web using python and PyQt5 with PyQtWebEngine.<br/>
+To work, install the following SlackBuilds:
+```
+- BeautifulSoup4.SlackBuild
+- python3-PyQtWebEngine.SlackBuild
+- python3-soupsieve.SlackBuild
+- whats.SlackBuild
 ```

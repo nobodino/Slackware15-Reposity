@@ -3,17 +3,6 @@
 
 SlackBuilds Repository specific for electron-based programs.
 
-## Correo Installation
-
-https://www.electronjs.org/apps/correo
-
-A menubar/taskbar Gmail App based on Electron.<br/>
-Uses Gmail's UI for mobile so it's best to use within menubar/taskbar.<br/>
-Install the following SlackBuild:
-```
-- Correo.SlackBuild
-```
-
 ## Discord Installation
 
 https://discord.com/
@@ -45,16 +34,6 @@ Free for desktop use, Notable is designed for people who like to see Markdown-fo
 Install the following SlackBuild:
 ```
 - notable.SlackBuild
-```
-
-## PlutoTV Installation
-
-https://github.com/MauricioFerrari-NovaTrento/Slackware15-Reposity/releases/tag/Release
-
-Unofficial webapp pluto-tv client for Linux. <br/>
-Install the following SlackBuild:
-```
-- pluto-tv.SlackBuild
 ```
 
 ## VSCodium Installation

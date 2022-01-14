@@ -12,7 +12,7 @@
 PRGNAM=google-chrome
 RELEASE=stable
 ARCH=x86_64
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-1chromedriver}
 TAG=${TAG:-_mxnt}
 
 WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
@@ -25,10 +25,10 @@ set -e
 wget -c $LINK
 rm -rf $PKG
 VERSION=$(ar p google-chrome-${RELEASE}_current_amd64.deb control.tar.xz 2> /dev/null | tar xJO ./control 2> /dev/null | grep Version | awk '{print $2}' | cut -d- -f1)
-mkdir -p $PKG/install
+CHROMEDRIVER=https://chromedriver.storage.googleapis.com/$VERSION/chromedriver_linux64.zip
+wget -c $CHROMEDRIVER
+mkdir -p $PKG/{install,usr/bin}
 cd $PKG; ar p $CWD/google-chrome-${RELEASE}_current_amd64.deb data.tar.xz | tar xJv
-chown -R root:root .
-chmod -R u+w,go+r-w,a+X-s .
 chmod 4711 opt/google/chrome/chrome-sandbox
 
 sed -i 's,libnss3.so.1d,libnss3.so\x00\x00\x00,g;
@@ -44,13 +44,18 @@ find $PKG/usr/man -type f -exec gzip -9 {} \;
 for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz; rm $i; done
 sed -i -e "s|Icon=google-chrome|Icon=/opt/google/chrome/product_logo_256.png|" $PKG/usr/share/applications/google-chrome.desktop
 
+cd usr/bin
+unzip $CWD/chromedriver_linux64.zip
+chown -R root:root .
+chmod -R u+w,go+r-w,a+X-s .
+
 echo "             |-----handy-ruler----------------------------------------------------|
 google-chrome: google-chrome (Google Chrome web browser)
 google-chrome:
 google-chrome: Google Chrome is a web browser that combines a minimal design with
 google-chrome: sophisticated technology to make the web faster, safer, and easier.
 google-chrome:
-google-chrome:
+google-chrome: Include chromedriver.
 google-chrome:
 google-chrome:
 google-chrome:
@@ -77,7 +82,7 @@ if [ -e usr/share/glib-2.0/schemas ]; then
 	fi
 fi" > $PKG/install/doinst.sh
 
-/sbin/makepkg -l y -c n $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
+cd $PKG; /sbin/makepkg -l y -c n $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
 chown -R 1000:users $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
 rm -rf $PKG
 

@@ -3,6 +3,37 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2022-01-14 #############################################
+
+### Upgraded / Atualizado
+ - Games:
+	- flare-game.SlackBuild
+ - Java:
+	- frostwire.SlackBuild
+ - Python:
+ 	- face.SlackBuild
+ 	- whats.SlackBuild
+ - Softwares:
+	- google-chrome.SlackBuild
+###
+
+### Changed / Modificado
+ - Softwares:
+	- google-chrome.SlackBuild
+		- Include chromedriver.
+###
+
+### Removed / Removido
+ - Electron:
+	- Correo.SlackBuild
+	- pluto-tv.SlackBuild
+ - Others:
+	- windscribe.SlackBuild
+###
+
+##########################################################################
+
+
 ## [ Released ] - 2022-01-04 #############################################
 
 ### Added / Adicionado
