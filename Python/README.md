@@ -95,8 +95,6 @@ To work, install the following SlackBuilds:
 For cli:
 - protonvpn-cli.SlackBuild
 - python3-docopt.SlackBuild
-- python3-Jinja2.SlackBuild
-- python3-MarkupSafe.SlackBuild (python3-Jinja2 dependency)
 - python3-pythondialog.SlackBuild
 
 For gui:

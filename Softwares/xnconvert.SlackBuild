@@ -9,7 +9,7 @@
 
 PRGNAM=xnconvert
 SRCNAM=XnConvert
-VERSION=1.94.0
+VERSION=1.95
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 

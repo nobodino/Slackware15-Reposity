@@ -8,6 +8,7 @@
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
 [ "`uname -m`" != "x86_64" ] && { echo -e "\n Not Support !\n"; exit 1; }
+[ ! "$(ls /var/log/packages/lib64openssl1.0.0* 2>&-)" ] && { echo -e "\nDependência Faltante: lib64openssl1.0.0 !\n"; exit 1; }
 
 PRGNAM=google-earth
 RELEASE=pro-stable
@@ -36,6 +37,7 @@ for icon in 16 22 24 32 48 64 128 256; do
 done
 rm -rf $PKG/{etc,usr/share/{menu,gnome-control-center}}
 rm -f $PKG/opt/google/earth/pro/libcrypto.so.1.0.0
+rm -f $PKG/opt/google/earth/pro/libssl.so.1.0.0
 
 echo "<?xml version=\"1.0\"?>
 <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>

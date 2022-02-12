@@ -8,7 +8,7 @@
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
 
 PRGNAM=vim
-VERSION=8.2.3444
+VERSION=8.2.4256
 VIMBRANCH=8.2
 CTAGSVER=5.8
 BUILD=${BUILD:-1}
@@ -24,7 +24,7 @@ WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK1=https://github.com/vim/vim/archive/refs/tags/v8.2.3444.tar.gz
+LINK1=https://github.com/vim/vim/archive/refs/tags/v8.2.4256.tar.gz
 LINK2=https://mirrors.slackware.com/slackware/slackware64-current/source/ap/vim/ctags-5.8.tar.xz
 LINK3=https://mirrors.slackware.com/slackware/slackware64-current/source/ap/vim/vim.vimrc.diff.gz
 

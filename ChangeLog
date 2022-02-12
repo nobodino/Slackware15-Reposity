@@ -3,6 +3,61 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2022-02-12 #############################################
+
+### Added / Adicionado
+ - Softwares:
+	- lib64openssl1.0.0.SlackBuild
+
+### Upgraded / Atualizado
+ - Electron:
+	- vscodium.SlackBuild
+ - Games:
+	- flare-game.SlackBuild
+ - Java:
+	- frostwire.SlackBuild
+	- jdk17.SlackBuild
+ - Others:
+	- gst-plugins-bad.SlackBuild
+	- gst-plugins.ugly.SlackBuild
+ - Softwares:
+	- imlib2.SlackBuild
+	- jack.SlackBuild
+	- ocenaudio.SlackBuild
+	- photoqt.SlackBuild
+	- qmplay2.SlackBuild
+	- telegram.SlackBuild
+	- xnconvert.SlackBuild
+ - Specific:
+	- recode.SlackBuild
+	- vim.SlackBuild
+###
+
+### Changed / Modificado
+ - Games:
+	- smc.SlackBuild
+###
+
+### Removed / Removido
+ - Games:
+	- CEGUI07.SlackBuild
+	- FreeImage.SlackBuild
+ - Python:
+	- python3-Jinja2.SlackBuild --> Included in Slackware 15.0 Stable.
+	- python3-MarkupSafe.SlackBuild --> Included in Slackware 15.0 Stable.
+ - Others:
+	- espeak.SlackBuild --> Included in Slackware 15.0 Stable.
+###
+
+### Fixed / Corrigido
+ - Softwares:
+	- codeblocks.SlackBuild --> Fixed Url Link.
+	- mx-conky.SlackBuild --> Fix Url for Conky Data.
+	- google-earth.SlackBuild
+
+##########################################################################
+
+
 ## [ Released ] - 2022-01-14 #############################################
 
 ### Upgraded / Atualizado

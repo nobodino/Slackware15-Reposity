@@ -9,7 +9,7 @@
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
 
 PRGNAM=imlib2
-VERSION=1.7.1
+VERSION=1.8.0
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
@@ -24,7 +24,7 @@ WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK=https://sourceforge.net/projects/enlightenment/files/imlib2-src/1.7.1/imlib2-1.7.1.tar.bz2
+LINK=https://phoenixnap.dl.sourceforge.net/project/enlightenment/imlib2-src/1.8.0/imlib2-1.8.0.tar.xz
 
 if [ "$ARCH" = "i586" ]; then
 	SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -51,10 +51,6 @@ cd $TMP; tar xvf $CWD/$PRGNAM-$VERSION.tar.?z*
 cd $PRGNAM-$VERSION
 chown -R root:root .
 chmod -R u+w,go+r-w,a+X-s .
-
-if ! grep -q "my_libs" configure.ac 2>/dev/null; then
-	sed -i 's|@my_libs@||' $PRGNAM-config.in
-fi
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \

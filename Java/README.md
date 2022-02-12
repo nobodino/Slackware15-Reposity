@@ -23,17 +23,19 @@ Easily search and download files directly from the bittorrent network and cloud 
 Use frostwire's built-in media library to access and play your downloads - all in one simple app.<br/>
 Install the following SlackBuild:
 ```
+- jdk16.SlackBuild
 - frostwire.SlackBuild
 ```
 
 ## JDownloader2 Installation
 
-https://github.com/4gray/iptvnator
+https://jdownloader.org/jdownloader2
 
 JDownloader is a free, open-source download management tool with a huge community of developers that makes downloading as easy and fast as it should be.<br/>
 Users can start, stop or pause downloads, set bandwith limitations, auto-extract archives and much more. <br/>
 Install the following SlackBuild:
 ```
+- jdk16.SlackBuild
 - JDownloader2.SlackBuild
 ```
 
@@ -45,4 +47,15 @@ These packages need "Java" to work, except "CLion" as it already has Java includ
 If you don't have Java installed, use this version:
 ```
 - jdk16.SlackBuild
+```
+
+## PyCharm Installation
+
+https://www.jetbrains.com/pycharm/
+
+The Python IDE for Professional Developers.<br/>
+With PyCharm, you can access the command line, connect to a database, create a virtual environment, and manage your version control system all in one place.<br/>
+Install the following SlackBuild:
+```
+- pycharm.SlackBuild
 ```

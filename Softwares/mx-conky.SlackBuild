@@ -11,7 +11,7 @@
 PRGNAM=mx-conky
 DATANAM=mx-conky-data
 VERSION=21.7
-DATAVER=20210827mx21
+DATAVER=20211226
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
@@ -27,7 +27,7 @@ CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
 LINK1=http://mxrepo.com/mx/repo/pool/main/m/mx-conky/mx-conky_21.7.tar.xz
-LINK2=http://mxrepo.com/mx/repo/pool/main/m/mx-conky-data/mx-conky-data_20210827mx21.tar.xz
+LINK2=http://mxrepo.com/mx/repo/pool/main/m/mx-conky-data/mx-conky-data_20211226.tar.xz
 LINK3=https://raw.githubusercontent.com/mxnt10/Slackware15-Reposity/master/Extra/MX-Conky_21.7_Fix/fix_check_messages.patch
 
 if [ "$ARCH" = "i586" ]; then
@@ -68,7 +68,7 @@ cp -a mx-conky.desktop $PKG/usr/share/applications
 cp -a translations/*.ts $PKG/usr/share/mx-conky/locale
 
 cd $TMP; tar xvf $CWD/${DATANAM}_${DATAVER}.tar.?z*
-cd all
+cd $DATANAM
 
 cp -a MX* $PKG/usr/share/mx-conky-data/themes
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
