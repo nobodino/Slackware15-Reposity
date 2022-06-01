@@ -3,6 +3,27 @@ All notable changes to this project will be documented in this file.
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 
 
+## [ Released ] - 2022-05-31 #############################################
+
+### Added / Adicionado
+ - Python:
+	- gnotifier.SlackBuild
+ - Others:
+	- ckdeps.SlackBuild
+	- cpu-limit.SlackBuild
+###
+
+### Changed / Modificado
+	- Modify all Slackbuilds.
+###
+
+### Removed / Removido
+ - Softwares:
+	- libqpsd.SlackBuild
+
+##########################################################################
+
+
 ## [ Released ] - 2022-02-12 #############################################
 
 ### Added / Adicionado

@@ -2,18 +2,18 @@
 
 # Slackware build script for python3-PyQtWebEngine
 
-# Copyright 2021 Mauricio Ferrari <m10ferrari1200@gmail.com>
+# Copyright 2022 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
 
 PRGNAM=python3-PyQtWebEngine
 SRCNAM=${PRGNAM#*-}
-VERSION=5.15.2
+VERSION=5.15.3
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
-WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
+mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM
 
 case "$( uname -m )" in
 	i?86) ARCH=i586 ;;
@@ -24,7 +24,7 @@ esac
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK=https://files.pythonhosted.org/packages/36/43/bd66139dc1b3abeaf4c79ee19de9eed9376f394113525de00494086a3773/PyQtWebEngine-5.15.2.tar.gz
+LINK=https://files.pythonhosted.org/packages/eb/00/f97a8c856ac477bedfcd3fe32f4f886534784bf257106905feaef3cd4a29/PyQtWebEngine-5.15.3.tar.gz
 
 
 if [ "$ARCH" = "i586" ]; then
@@ -87,7 +87,6 @@ cd $CWD
 if [ "${INST:-no}" = "yes" ]; then
 	OPTION=y
 else
-	[ -e "../Exclamation.mp3" ] && pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY mplayer $WD/Exclamation.mp3 > /dev/null
 	read $TIME -p "O pacote já pode ser instalado? (y/n) (default=n)" OPTION
 fi
 case "$OPTION" in

@@ -3,17 +3,16 @@
 
 # Slackware build script for photoqt
 
-# Copyright 2021 Mauricio Ferrari <m10ferrari1200@gmail.com>
+# Copyright 2022 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
 [ ! "$(ls /var/log/packages/graphicsmagick* 2>&-)" ] && { echo -e "\nDependência Faltante: graphicsmagick !\n"; ERRO=1; }
-[ ! "$(ls /var/log/packages/libqpsd*        2>&-)" ] && { echo -e "\nDependência Faltante: libqpsd !       \n"; ERRO=1; }
 [ ! "$(ls /var/log/packages/pugixml*        2>&-)" ] && { echo -e "\nDependência Faltante: pugixml !       \n"; ERRO=1; }
 [ "$ERRO" = 1 ] && exit 1
 
 PRGNAM=photoqt
-VERSION=2.5
+VERSION=2.6
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
@@ -23,12 +22,12 @@ case "$( uname -m )" in
 	   *) export ARCH=$( uname -m ) ;;
 esac
 
-WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
+mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM
 
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK=https://photoqt.org/downloads/source/photoqt-2.5.tar.gz
+LINK=https://photoqt.org/downloads/source/photoqt-2.6.tar.gz
 
 if [ "$ARCH" = "i586" ]; then
 	SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -63,6 +62,9 @@ cmake -Wno-dev \
   -DCMAKE_INSTALL_PREFIX=/usr \
   -DFREEIMAGE=OFF \
   -DDEVIL=OFF \
+  -DPOPPLER=OFF \
+  -DIMAGEMAGICK=OFF \
+  -DGRAPHICSMAGICK=ON \
   -DCHROMECAST=OFF \
   -DCMAKE_BUILD_TYPE=Release .
 make; make install DESTDIR=$PKG
@@ -116,7 +118,6 @@ cd $CWD
 if [ "${INST:-no}" = "yes" ]; then
 	OPTION=y
 else
-	[ -e "../Exclamation.mp3" ] && pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY mplayer $WD/Exclamation.mp3 > /dev/null
 	read $TIME -p "O pacote já pode ser instalado? (y/n) (default=n)" OPTION
 fi
 case "$OPTION" in

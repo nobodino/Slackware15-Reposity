@@ -3,7 +3,7 @@
 
 # Slackware build script for python3-xlib
 
-# Copyright 2021 Mauricio Ferrari <m10ferrari1200@gmail.com>
+# Copyright 2022 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
@@ -20,15 +20,15 @@ case "$( uname -m )" in
 	   *) ARCH=$( uname -m ) ;;
 esac
 
-WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
+mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM
 
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK1=https://github.com/python-xlib/python-xlib/releases/download/0.31/python-xlib-0.31.tar.bz2
+LINK=https://github.com/python-xlib/python-xlib/releases/download/0.31/python-xlib-0.31.tar.bz2
 
 set -e
-wget -c $LINK1
+wget -c $LINK
 rm -rf $PKG $TMP/$SRCNAM-$VERSION
 mkdir -p $PKG/{install,usr/doc/$PRGNAM-$VERSION}
 cd $TMP; tar xvf $CWD/$SRCNAM-$VERSION.tar.?z*
@@ -61,7 +61,6 @@ cd $CWD
 if [ "${INST:-no}" = "yes" ]; then
 	OPTION=y
 else
-	[ -e "../Exclamation.mp3" ] && pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY mplayer $WD/Exclamation.mp3 > /dev/null
 	read $TIME -p "O pacote já pode ser instalado? (y/n) (default=n)" OPTION
 fi
 case "$OPTION" in

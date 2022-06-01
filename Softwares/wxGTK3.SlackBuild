@@ -3,7 +3,7 @@
 
 # Slackware build script for wxGTK3
 
-# Copyright 2021 Mauricio Ferrari <m10ferrari1200@gmail.com>
+# Copyright 2022 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
@@ -13,6 +13,7 @@ SRCNAM=wxWidgets
 VERSION=3.0.5.1
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
+NUMJOBS=${NUMJOBS:-" -j$(nproc) "}
 
 case "$( uname -m )" in
 	i?86) ARCH=i586 ;;
@@ -20,7 +21,7 @@ case "$( uname -m )" in
 	   *) ARCH=$( uname -m ) ;;
 esac
 
-WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
+mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM
 
 CWD=$PWD
 TMP=/tmp
@@ -55,75 +56,74 @@ chmod -R u+w,go+r-w,a+X-s .
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
+CFLAGS="$SLKCFLAGS" \
 ./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
-  --localstatedir=/var \
   --mandir=/usr/man \
-  --infodir=/usr/info \
-  --enable-mediactrl \
-  --with-opengl \
+  --docdir=/usr/doc/$PRGNAM-$VERSION \
+  --localstatedir=/var \
+  --sysconfdir=/etc \
+  --disable-precomp-headers \
+  --disable-shared \
+  --disable-stl \
   --enable-graphics_ctx \
-  --with-gtk=2 \
-  --enable-unicode \
+  --enable-mediactrl \
   --enable-plugins \
-  --enable-ipv6 \
+  --enable-unicode \
   --enable-webview \
-  --with-sdl \
-  --with-libmspack \
-  --enable-shared \
+  --with-gtk=2 \
+  --with-opengl \
+  --with-libpng=sys \
   --with-libxpm=sys \
   --with-libjpeg=sys \
   --with-libtiff=sys \
-  --disable-precomp-headers \
-  --enable-webviewwebkit \
+  --program-prefix= \
+  --program-suffix= \
   --build=$ARCH-slackware-linux
-make; make -C locale allmo; make install DESTDIR=$PKG
+make $NUMJOBS; make -C locale allmo; make install DESTDIR=$PKG
 
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
 mv $PKG/usr/bin/wx-config{,-gtk2}
-rm -r $PKG/usr/{include,share,lib$LIBDIRSUFFIX/libwx_base*,bin/wxrc*}
 
 make clean
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
+CFLAGS="$SLKCFLAGS" \
 ./configure \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
-  --localstatedir=/var \
   --mandir=/usr/man \
-  --infodir=/usr/info \
-  --enable-mediactrl \
-  --with-opengl \
+  --docdir=/usr/doc/$PRGNAM-$VERSION \
+  --localstatedir=/var \
+  --sysconfdir=/etc \
+  --disable-precomp-headers \
+  --disable-shared \
+  --disable-stl \
   --enable-graphics_ctx \
-  --with-gtk=3 \
-  --enable-unicode \
+  --enable-mediactrl \
   --enable-plugins \
-  --enable-ipv6 \
-  --enable-webview \
+  --enable-unicode \
+  --with-gtk=3 \
+  --with-opengl \
+  --program-prefix= \
+  --program-suffix= \
   --with-sdl \
   --with-libmspack \
-  --enable-shared \
+  --with-libpng=sys \
   --with-libxpm=sys \
   --with-libjpeg=sys \
   --with-libtiff=sys \
-  --disable-precomp-headers \
-  --enable-webviewwebkit \
   --build=$ARCH-slackware-linux
-make; make -C locale allmo; make install DESTDIR=$PKG
+make $NUMJOBS; make -C locale allmo; make install DESTDIR=$PKG
 
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
+mv $PKG/usr/bin/wx-config{,-gtk3}
+
 find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 find $PKG | xargs file | grep "current ar archive" | cut -f 1 -d : | xargs strip -g 2> /dev/null || true
 cp -a docs/* $PKG/usr/doc/$PRGNAM-$VERSION
-
-if [ "${STATIC}:-no" = "yes" ]; then
-	ln -fs /usr/lib${LIBDIRSUFFIX}/wx/config/gtk2-unicode-static-3.0 $PKG/usr/bin/wx-config
-else
-	ln -fs /usr/lib${LIBDIRSUFFIX}/wx/config/gtk2-unicode-3.0 $PKG/usr/bin/wx-config
-fi
+ln -fs /usr/lib${LIBDIRSUFFIX}/wx/config/gtk2-unicode-static-3.0 $PKG/usr/bin/wx-config
 
 echo "      |-----handy-ruler------------------------------------------------------|
 wxGTK3: wxGTK3 (cross-platform GUI toolkit)
@@ -147,7 +147,6 @@ cd $CWD
 if [ "${INST:-no}" = "yes" ]; then
 	OPTION=y
 else
-	[ -e "../Exclamation.mp3" ] && pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY mplayer $WD/Exclamation.mp3 > /dev/null
 	read $TIME -p "O pacote já pode ser instalado? (y/n) (default=n)" OPTION
 fi
 case "$OPTION" in

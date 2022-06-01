@@ -3,7 +3,7 @@
 
 # Slackware build script for BeautifulSoup4
 
-# Copyright 2021 Mauricio Ferrari <m10ferrari1200@gmail.com>
+# Copyright 2022 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
@@ -11,7 +11,7 @@
 
 PRGNAM=BeautifulSoup4
 SRCNAM=beautifulsoup4
-VERSION=4.10.0
+VERSION=4.11.1
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
@@ -21,12 +21,12 @@ case "$( uname -m )" in
 	   *) ARCH=$( uname -m ) ;;
 esac
 
-WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM
+mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM
 
 CWD=$PWD
 TMP=/tmp
 PKG=$TMP/package-$PRGNAM
-LINK=https://www.crummy.com/software/BeautifulSoup/bs4/download/4.10/beautifulsoup4-4.10.0.tar.gz
+LINK=https://www.crummy.com/software/BeautifulSoup/bs4/download/4.11/beautifulsoup4-4.11.1.tar.gz
 
 set -e
 wget -c $LINK
@@ -41,7 +41,7 @@ python3 setup.py build
 python3 setup.py install --root=$PKG --optimize=1 --skip-build
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
-cp -a README.md COPYING.txt NEWS.txt TODO.txt doc/* $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a README.md COPYING.txt NEWS.txt doc/* $PKG/usr/doc/$PRGNAM-$VERSION
 
 echo "              |-----handy-ruler------------------------------------------------------|
 BeautifulSoup4: BeautifulSoup4 (Python HTML/XML parser)
@@ -65,7 +65,6 @@ cd $CWD
 if [ "${INST:-no}" = "yes" ]; then
 	OPTION=y
 else
-	[ -e "../Exclamation.mp3" ] && pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY mplayer $WD/Exclamation.mp3 > /dev/null
 	read $TIME -p "O pacote já pode ser instalado? (y/n) (default=n)" OPTION
 fi
 case "$OPTION" in

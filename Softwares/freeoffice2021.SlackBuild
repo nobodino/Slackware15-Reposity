@@ -3,7 +3,7 @@
 
 # Slackware build script for freeoffice2018
 
-# Copyright 2021 Mauricio Ferrari <m10ferrari1200@gmail.com>
+# Copyright 2022 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
@@ -15,7 +15,7 @@ ARCH=x86_64
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
-WD=$PWD; mkdir -p $PRGNAM; chown -R 1000:users $PRGNAM; cd $PRGNAM 
+mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM 
 
 CWD=$PWD
 TMP=/tmp
@@ -74,7 +74,7 @@ GenericName=Spreadsheet
 Icon=application-x-pml21free
 InitialPreference=10
 MimeType=application/x-pmd;application/x-pmdx;application/x-pmv;application/excel;application/x-excel;application/x-ms-excel;application/x-msexcel;application/x-sylk;application/x-xls;application/xls;application/vnd.ms-excel;application/vnd.stardivision.calc;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;application/vnd.openxmlformats-officedocument.spreadsheetml.template;application/vnd.ms-excel.sheet.macroenabled.12;application/vnd.openxmlformats-officedocument.spreadsheetml.template;application/vnd.ms-excel.template.macroEnabled.12;application/x-dif;text/spreadsheet;text/csv;application/x-prn;application/vnd.ms-excel.sheet.binary.macroenabled.12;
-Name=FreeOffice 2021 PlanMaker
+Name=FreeOffice 2022 PlanMaker
 NoDisplay=false
 Path=/opt/$PRGNAM
 StartupNotify=true
@@ -95,7 +95,7 @@ GenericName=Presentation
 Icon=application-x-prl21free
 InitialPreference=10
 MimeType=application/x-prdx;application/x-prvx;application/x-prsx;application/x-prd;application/x-prv;application/x-prs;application/ppt;application/mspowerpoint;application/vnd.ms-powerpoint;application/vnd.openxmlformats-officedocument.presentationml.presentation;application/vnd.ms-powerpoint.presentation.macroenabled.12;application/vnd.openxmlformats-officedocument.presentationml.template;application/vnd.ms-powerpoint.template.macroEnabled.12;application/vnd.ms-powerpoint.slideshow.macroenabled.12;application/vnd.openxmlformats-officedocument.presentationml.slideshow;
-Name=FreeOffice 2021 Presentations
+Name=FreeOffice 2022 Presentations
 NoDisplay=false
 Path=/opt/$PRGNAM
 StartupNotify=true
@@ -116,7 +116,7 @@ GenericName=Word Processor
 Icon=application-x-tml21free
 InitialPreference=10
 MimeType=application/x-tmdx;application/x-tmvx;application/x-tmd;application/x-tmv;application/msword;application/vnd.ms-word;application/x-doc;text/rtf;application/rtf;application/vnd.oasis.opendocument.text;application/vnd.oasis.opendocument.text-template;application/vnd.stardivision.writer;application/vnd.sun.xml.writer;application/vnd.sun.xml.writer.template;application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/vnd.ms-word.document.macroenabled.12;application/vnd.openxmlformats-officedocument.wordprocessingml.template;application/vnd.ms-word.template.macroenabled.12;application/x-pocket-word;application/x-dbf;application/msword-template;
-Name=FreeOffice 2021 TextMaker
+Name=FreeOffice 2022 TextMaker
 NoDisplay=false
 Path=/opt/$PRGNAM
 StartupNotify=true
@@ -175,7 +175,6 @@ cd $CWD
 if [ "${INST:-no}" = "yes" ]; then
 	OPTION=y
 else
-	[ -e "../Exclamation.mp3" ] && pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY mplayer $WD/Exclamation.mp3 > /dev/null
 	read $TIME -p "O pacote já pode ser instalado? (y/n) (default=n)" OPTION
 fi
 case "$OPTION" in
