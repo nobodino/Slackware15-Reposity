@@ -20,7 +20,7 @@ mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM
 CWD=$PWD
 TMP=/tmp/qt
 PKG=$TMP/package-$PRGNAM
-LINK1=https://raw.githubusercontent.com/rpmsphere/x86_64/master/u/umplayer-0.98.2-5.1.x86_64.rpm
+LINK1=https://github.com/mxnt10/Slackware15-Reposity/releases/download/Release/umplayer-0.98.2-5.1.x86_64.rpm
 LINK2=https://mirrors.slackware.com/slackware/slackware64-14.2/slackware64/l/qt-4.8.7-x86_64-4.txz
 
 set -e
