@@ -1,4 +1,4 @@
-# Slackware15-Reposity Python
+# Slackware15-Reposity Softwares
 *Programs slackbuilds for Slackware 15.0 Stable ( x86_64 / i586 ).*
 
 SlackBuilds Repository for program sources.
@@ -35,48 +35,6 @@ To work, install the following SlackBuilds:
 - libcpuid.SlackBuild
 ```
 
-## CodeBlocks Installation
-
-https://www.codeblocks.org/
-
-Code::Blocks is a free C/C++ and Fortran IDE built to meet the most demanding needs of its users.<br/>
-It is designed to be very extensible and fully configurable.<br/>
-To work, install the following SlackBuilds:
-```
-- codeblocks.SlackBuild
-- wxGTK3.SlackBuild
-```
-
-## Conky Complete Installation
-
-https://github.com/zcot/conky-manager2<br/>
-https://github.com/MX-Linux/mx-conky<br/>
-https://github.com/MX-Linux/mx-conky-data
-
-Conky is a free, light-weight system monitor for X, that displays any kind of information on your desktop.<br/>
-To work, install the following SlackBuilds:
-```
-For Conky:
-- conky.SlackBuild
-- imlib2.SlackBuild
-- tolua++.SlackBuild
-
-For interfaces:
-- conky-manager.SlackBuild
-- mx-conky.SlackBuild
-```
-
-## Eclipse JEE Installation
-
-https://www.eclipse.org/
-
-Tools for developers working with Java and Web applications.<br/>
-Including a Java IDE, tools for JavaScript, TypeScript, JavaServer Pages and Faces, Yaml, Markdown, Web Services, JPA and Data Tools, Maven and Gradle, Git, and more.<br/>
-To work, install the following SlackBuilds:
-```
-- eclipse-jee.SlackBuild
-```
-
 ## FlareGet Installation
 
 https://flareget.com/
@@ -107,42 +65,6 @@ To work, install the following SlackBuilds:
 - google-earth.SlackBuild
 ```
 
-## MPV Installation
-
-https://mpv.io/
-
-MPV is a free (as in freedom) media player for the command line.<br/>
-It supports a wide variety of media file formats, audio and video codecs, and subtitle types.<br/>
-It has the following dependencies:
-```
-- libasound  : Already avaliable in ALSA.
-- pulseaudio : Already installed.
-- ffmpeg     : Already installed.
-
-- libass     : Not installed.
-- libplacebo : Not installed.
-- lua        : Not installed.
-- mujs       : Not installed.
-
-- jack               : Optional.
-- libjpeg            : Optional.
-- nvdec              : Optional.
-- rubberband         : Optional.
-- uchardet           : Optional.
-- vaapi              : Optional.
-- vapoursynth        : Optional.
-- vapoursynth-script : Optional.
-- zlib               : Optional.
-```
-To work, install the following SlackBuilds:
-```
-- mpv.SlackBuild
-- libass.SlackBuild
-- libplacebo.SlackBuild
-- lua.SlackBuild
-- mujs.SlackBuild
-```
-
 ## Nulloy Installation
 
 https://nulloy.com/
@@ -167,29 +89,6 @@ To work, install the following SlackBuilds:
 
 - gst-plugins-ugly.SlackBuild (optional)
 - gst-plugins-bad.SlackBuild (optional)
-```
-
-## Ocenaudio Installation
-
-https://www.ocenaudio.com/
-
-An easy, fast and functional audio editor.<br/>
-To work, install the following SlackBuilds:
-```
-- ocenaudio.SlackBuild
-- jack.SlackBuild
-```
-
-## P7Zip Installation
-
-https://github.com/jinfeihan57/p7zip
-
-p7zip is a quick port of 7z.exe and 7za.exe (command line version of 7zip, see www.7-zip.org) for Unix.<br/>
-7-Zip is a file archiver with highest compression ratio.<br/>
-To work, install the following SlackBuilds:
-```
-- p7zip.SlackBuild
-- wxGTK3.SlackBuild
 ```
 
 ## PhotoQT Installation
@@ -294,14 +193,4 @@ To work, install the following SlackBuilds:
 ```
 - aria2.SlackBuild
 - uget.SlackBuild
-```
-
-## UMPlayer Installation
-
-https://www.smplayer.info/umplayer
-
-The Universal Media Player, is an application based on SMPlayer 0.6.9, with some extra features like Youtube playback.<br/>
-To work, install the following SlackBuilds:
-```
-- umplayer.SlackBuild
 ```
