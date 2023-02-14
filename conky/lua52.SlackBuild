@@ -24,7 +24,7 @@ CWD=$PWD
 TMP=/tmp/MXNT
 PKG=$TMP/package-$PRGNAM
 LINK1=http://www.lua.org/ftp/lua-5.2.4.tar.gz
-LINK2=https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/lua52/trunk/liblua.so.patch
+LINK2=https://raw.githubusercontent.com/mxnt10/Slackware15-Reposity/master/conky/PKGS/lua52/liblua.so.patch
 
 if [ "$ARCH" = "i586" ]; then
 	SLKCFLAGS="-O2 -march=i586 -mtune=i686"
