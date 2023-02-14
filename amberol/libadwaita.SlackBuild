@@ -16,14 +16,13 @@ case "$( uname -m )" in
 	   *) export ARCH=$( uname -m ) ;;
 esac
 
+PATHDIR=$PWD/patch
 mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM
 
 CWD=$PWD
 TMP=/tmp/MXNT
 PKG=$TMP/package-$PRGNAM
 LINK1=https://gitlab.gnome.org/GNOME/libadwaita/-/archive/1.2.2/libadwaita-1.2.2.tar.gz
-LINK2=https://slackbuilds.org/slackbuilds/15.0/libraries/libadwaita/libadwaita-1.0.5-support-gtk-4.4.patch
-LINK3=https://slackbuilds.org/slackbuilds/15.0/libraries/libadwaita/libadwaita-1.0.5-suppress-line-break-warnings.patch
 
 if [ "$ARCH" = "i586" ]; then
         SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -43,13 +42,11 @@ else
 fi
 
 set -e
-wget -c $LINK1 $LINK2 $LINK3
+wget -c $LINK1
 rm -rf $TMP
 mkdir -p $PKG/{install,usr/doc/$PRGNAM-$VERSION}
 cd $TMP; tar xvf $CWD/$PRGNAM-$VERSION.tar.?z*
 cd $PRGNAM-$VERSION
-patch -p1 < $CWD/libadwaita-1.0.5-support-gtk-4.4.patch
-patch -p1 < $CWD/libadwaita-1.0.5-suppress-line-break-warnings.patch
 chown -R root:root .
 chmod -R u+w,go+r-w,a+X-s .
 
