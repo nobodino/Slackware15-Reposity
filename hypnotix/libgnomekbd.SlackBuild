@@ -1,14 +1,12 @@
 #!/bin/sh
 
-# Slackware build script for libgnomekbd
-
-# Copyright 2022 Mauricio Ferrari <m10ferrari1200@gmail.com>
+# Copyright 2023 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
 
 PRGNAM=libgnomekbd
-VERSION=3.26.1
+VERSION=3.28.1
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
@@ -21,9 +19,9 @@ esac
 mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM 
 
 CWD=$PWD
-TMP=/tmp
+TMP=/tmp/MXNT
 PKG=$TMP/package-$PRGNAM
-LINK=http://ftp.acc.umu.se/pub/gnome/sources/libgnomekbd/3.26/libgnomekbd-3.26.1.tar.xz
+LINK=http://ftp.acc.umu.se/pub/gnome/sources/libgnomekbd/3.28/libgnomekbd-3.28.1.tar.xz
 
 if [ "$ARCH" = "i586" ]; then
 	SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -44,28 +42,37 @@ fi
 
 set -e
 wget -c $LINK
-rm -rf $PKG $TMP/$PRGNAM-$VERSION
+rm -rf $TMP
 mkdir -p $PKG/{install,usr/doc/$PRGNAM-$VERSION}
 cd $TMP; tar xvf $CWD/$PRGNAM-$VERSION.tar.?z
 cd $PRGNAM-$VERSION
 chown -R root:root .
 chmod -R u+w,go+r-w,a+X-s .
 
-CFLAGS="$SLKCFLAGS" \
-CXXFLAGS="$SLKCFLAGS" \
-./configure \
+NUMJOBS=${NUMJOBS:-" -j$(expr $(nproc) + 1) "}
+export CFLAGS="$SLKCFLAGS"
+export CXXFLAGS="$SLKCFLAGS"
+mkdir meson-build
+cd meson-build
+meson setup \
   --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
+  --libdir=lib${LIBDIRSUFFIX} \
+  --libexecdir=/usr/libexec \
+  --bindir=/usr/bin \
+  --sbindir=/usr/sbin \
+  --includedir=/usr/include \
+  --datadir=/usr/share \
+  --mandir=/usr/man \
   --sysconfdir=/etc \
   --localstatedir=/var \
-  --mandir=/usr/man \
-  --docdir=/usr/doc/$PRGNAM-$VERSION \
-  --disable-static \
-  --build=$ARCH-slackware-linux
-make; make install-strip DESTDIR=$PKG
+  --buildtype=release \
+  -Dgtk_doc=false ..
+  "${NINJA:=ninja}" $NUMJOBS
+  DESTDIR=$PKG $NINJA install
+cd ..
 
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
-cp -a AUTHORS COPYING* $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a AUTHORS ChangeLog* COPYING* MAINTAINERS NEWS README* $PKG/usr/doc/$PRGNAM-$VERSION
 find $PKG/usr/doc/$PRGNAM-$VERSION/ -type f -exec chmod 644 {} \;
 
 echo "           |-----handy-ruler------------------------------------------------------|
@@ -83,7 +90,7 @@ libgnomekbd:" > $PKG/install/slack-desc
 
 cd $PKG; /sbin/makepkg -l y -c n $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
 chown -R 1000:users $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
-rm -rf $PKG $TMP/$PRGNAM-$VERSION
+rm -rf $TMP
 
 cd $CWD
 [ ${TIME:-0} != 0 ] && TIME="-t $TIME" || TIME=

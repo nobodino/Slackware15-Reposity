@@ -1,14 +1,13 @@
 #!/bin/sh
 
-# Slackware build script for libgnomekbd
-
-# Copyright 2022 Mauricio Ferrari <m10ferrari1200@gmail.com>
+# Copyright 2023 Mauricio Ferrari <m10ferrari1200@gmail.com>
 # All rights reserved.
 
 [ $UID != 0 ] && { echo -e "\nExecute como Root !\n"; exit 1; }
+[ ! "$(ls /var/log/packages/libgnomekbd* 2>&-)" ] && { echo -e "\nDependência Faltante: libgnomekbd !\n"; exit 1; }
 
-PRGNAM=libgnomekbd
-VERSION=3.26.1
+PRGNAM=xapp
+VERSION=2.2.1
 BUILD=${BUILD:-1}
 TAG=${TAG:-_mxnt}
 
@@ -21,9 +20,9 @@ esac
 mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM 
 
 CWD=$PWD
-TMP=/tmp
+TMP=/tmp/MXNT
 PKG=$TMP/package-$PRGNAM
-LINK=http://ftp.acc.umu.se/pub/gnome/sources/libgnomekbd/3.26/libgnomekbd-3.26.1.tar.xz
+LINK=https://github.com/linuxmint/xapp/archive/2.2.1/xapp-2.2.1.tar.gz
 
 if [ "$ARCH" = "i586" ]; then
 	SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -44,46 +43,48 @@ fi
 
 set -e
 wget -c $LINK
-rm -rf $PKG $TMP/$PRGNAM-$VERSION
-mkdir -p $PKG/{install,usr/doc/$PRGNAM-$VERSION}
-cd $TMP; tar xvf $CWD/$PRGNAM-$VERSION.tar.?z
+rm -rf $TMP
+mkdir -p $PKG/{install,usr/doc/$PRGNAM-$VERSION,etc/profile.d}
+cd $TMP; tar xvf $CWD/$PRGNAM-$VERSION.tar.?z*
 cd $PRGNAM-$VERSION
 chown -R root:root .
 chmod -R u+w,go+r-w,a+X-s .
 
-CFLAGS="$SLKCFLAGS" \
-CXXFLAGS="$SLKCFLAGS" \
-./configure \
+mkdir -p build
+cd build
+meson setup \
   --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
-  --localstatedir=/var \
+  --buildtype=release \
+  --libdir=lib${LIBDIRSUFFIX} \
+  --libexecdir=/usr/lib${LIBDIRSUFFIX} \
   --mandir=/usr/man \
-  --docdir=/usr/doc/$PRGNAM-$VERSION \
-  --disable-static \
-  --build=$ARCH-slackware-linux
-make; make install-strip DESTDIR=$PKG
+  -Ddocs=true ..
+  ninja; DESTDIR=$PKG ninja install
+cd ..
 
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
-cp -a AUTHORS COPYING* $PKG/usr/doc/$PRGNAM-$VERSION
+find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
+mv $PKG/etc/X11/xinit/xinitrc.d/80xapp-gtk3-module.sh $PKG/etc/profile.d/
+rm -rf $PKG/etc/X11/
+cp -a COPYING $PKG/usr/doc/$PRGNAM-$VERSION
 find $PKG/usr/doc/$PRGNAM-$VERSION/ -type f -exec chmod 644 {} \;
 
-echo "           |-----handy-ruler------------------------------------------------------|
-libgnomekbd: libgnomekbd (XKB Hooks)
-libgnomekbd:
-libgnomekbd: libgnomekbd contains xkb hooks used by the CINNAMON desktop.
-libgnomekbd:
-libgnomekbd:
-libgnomekbd:
-libgnomekbd:
-libgnomekbd:
-libgnomekbd:
-libgnomekbd:
-libgnomekbd:" > $PKG/install/slack-desc
+echo "    |-----handy-ruler------------------------------------------------------|
+xapp: xapp (Common library for X-Apps project)
+xapp:
+xapp: This project gathers the components which are common to multiple
+xapp: desktop environments and required to implement cross-DE solutions.
+xapp:
+xapp:
+xapp: Project URL: https://github.com/linuxmint/xapp
+xapp:
+xapp:
+xapp:
+xapp:" > $PKG/install/slack-desc
 
 cd $PKG; /sbin/makepkg -l y -c n $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
 chown -R 1000:users $CWD/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.txz
-rm -rf $PKG $TMP/$PRGNAM-$VERSION
+rm -rf $TMP
 
 cd $CWD
 [ ${TIME:-0} != 0 ] && TIME="-t $TIME" || TIME=
