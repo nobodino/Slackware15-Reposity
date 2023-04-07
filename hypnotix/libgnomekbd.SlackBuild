@@ -65,8 +65,7 @@ meson setup \
   --mandir=/usr/man \
   --sysconfdir=/etc \
   --localstatedir=/var \
-  --buildtype=release \
-  -Dgtk_doc=false ..
+  --buildtype=release ..
   "${NINJA:=ninja}" $NUMJOBS
   DESTDIR=$PKG $NINJA install
 cd ..
