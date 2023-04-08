@@ -21,7 +21,7 @@ mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM
 CWD=$PWD
 TMP=/tmp/MXNT
 PKG=$TMP/package-$PRGNAM
-LINK=http://ftp.acc.umu.se/pub/gnome/sources/libgnomekbd/3.28/libgnomekbd-3.28.1.tar.xz
+LINK=http://ftp.acc.umu.se/pub/gnome/sources/libgnomekbd/3.28/libgnomekbd-$VERSION.tar.xz
 
 if [ "$ARCH" = "i586" ]; then
 	SLKCFLAGS="-O2 -march=i586 -mtune=i686"

@@ -22,7 +22,7 @@ mkdir -p PKGS/$PRGNAM; chown -R 1000:users PKGS; cd PKGS/$PRGNAM
 CWD=$PWD
 TMP=/tmp/MXNT
 PKG=$TMP/package-$PRGNAM
-LINK=https://github.com/dvarrazzo/py-setproctitle/archive/refs/tags/version-1.3.2.tar.gz
+LINK=https://github.com/dvarrazzo/py-setproctitle/archive/refs/tags/version-$VERSION.tar.gz
 
 set -e
 wget -c -O $SRCNAM-$VERSION.tar.gz $LINK
